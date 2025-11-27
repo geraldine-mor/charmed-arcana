@@ -1,0 +1,6 @@
+{
+    "pretty-formatter.commentLine": true,
+    "pretty-formatter.cssInsertLines": true,
+    "pretty-formatter.indentLevel": 2,
+    "pretty-formatter.indentSize": 2
+}
