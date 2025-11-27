@@ -1,3 +1,34 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cinzel+Decorative:wght@400;700;900&family=Italianno&display=swap');
+
+:root {
+    --primary-dark: #221133; /*Aubergine*/
+    --primary-light: #ddffe0; /*Mint*/
+    --heading: "Cinzel Decorative", serif;
+    --body: "Italianno", cursive;
+    --accent: "Assistant", sans-serif;
+    --accent-blue: #aac6d7; 
+    --accent-sand: #cab185;
+    --accent-lilac: #beb7df;
+}
+
 body {
-    background-color: #ddffe0;
+    background-color: var(--accent-blue);
+}
+
+.navbar {
+    background-color: var(--primary-dark);
+    font-family: var(--heading);
+    color: var(--primary-light);
+}
+
+.navbar a {
+    color: var(--primary-light);
+    font-weight: 500;
+    text-transform: uppercase; 
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
 }
