@@ -1,34 +1,55 @@
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cinzel+Decorative:wght@400;700;900&family=Italianno&display=swap');
 
+/*CSS Variables*/
 :root {
     --primary-dark: #221133; /*Aubergine*/
     --primary-light: #ddffe0; /*Mint*/
     --heading: "Cinzel Decorative", serif;
-    --body: "Italianno", cursive;
-    --accent: "Assistant", sans-serif;
+    --body: "Assistant", sans-serif;
+    --accent: "Italianno", cursive;
     --accent-blue: #aac6d7; 
     --accent-sand: #cab185;
     --accent-lilac: #beb7df;
 }
 
+/*Utility Classes*/
+.hidden {
+    display: none;
+}
+
 body {
     background-color: var(--accent-blue);
+    font-family: var(--body);
 }
 
 .navbar {
     background-color: var(--primary-dark);
-    font-family: var(--heading);
     color: var(--primary-light);
+    box-shadow: 0px -4px 10px rgba(162, 69, 255, .6) inset;
+}
+
+.navbar-brand {
+    font-family: var(--heading);
+    text-transform: uppercase; 
 }
 
 .navbar a {
     color: var(--primary-light);
-    font-weight: 500;
-    text-transform: uppercase; 
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 #logo {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
+}
+
+/*Buttons*/
+#menu-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--primary-light);
+    font-size: 1.6rem;
+    padding: 0;
 }
