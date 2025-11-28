@@ -18,31 +18,60 @@
     display: none;
 }
 
+/*General Styles*/
 body {
     background-color: var(--accent-blue);
     font-family: var(--body);
 }
 
+/*Navbar*/
 .navbar {
     background-color: var(--primary-dark);
-    color: var(--primary-light);
-    box-shadow: 0px -4px 10px rgba(162, 69, 255, .6) inset;
+    box-shadow: 0px -4px 7px rgba(221, 255, 224, .6) inset;
 }
 
 .navbar-brand {
     font-family: var(--heading);
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem; 
 }
 
 .navbar a {
+    color: var(--primary-light); 
+}
+
+.active, .nav-link:hover {
+    text-decoration: underline;
     color: var(--primary-light);
-    font-weight: 600;
-    font-size: 0.9rem;
 }
 
 #logo {
     height: 30px;
     width: 30px;
+}
+
+/*Footer*/
+footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.7rem;
+}
+
+.socials i {
+    display: inline-block;
+    perspective: 300px;
+    transform: rotateY(0deg);
+    transition: all 1.2s ease;
+}
+
+.socials i:hover {
+    transform: rotateY(180deg);    
 }
 
 /*Buttons*/
