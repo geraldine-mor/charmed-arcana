@@ -44,16 +44,28 @@ body {
 
 .navbar a {
     color: var(--primary-light); 
+    transition: all 0.5s ease-in-out;
 }
 
-.active, .nav-link:hover {
-    text-decoration: underline;
-    color: var(--primary-light);
+#nav-menu {
+    min-width: 100%;
+}
+
+#nav-links .active {
+    color: var(--accent-sand);
+}
+
+.nav-link:hover {
+    color: var(--accent-sand);
 }
 
 #logo {
     height: 30px;
     width: 30px;
+}
+
+main {
+    margin-top: 56px;
 }
 
 /*Footer*/
@@ -87,4 +99,24 @@ footer a {
     color: var(--primary-light);
     font-size: 1.6rem;
     padding: 0;
+}
+
+/*Media Queries*/
+/*Medium screens and up (768px)*/
+@media screen and (min-width:768px) {
+    #menu-btn {
+        display: none;
+    }
+
+    #nav-menu {
+        display: block;
+    }
+
+    #nav-links {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        padding-right: 10px;
+    }
 }
