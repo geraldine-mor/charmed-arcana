@@ -105,9 +105,8 @@ main {
 }
 
 #about-image {
-    background: url(../images/about-image.webp) no-repeat center center / cover;
+    background: url(../images/about-image.webp) no-repeat center 30% / cover;
     z-index: 100;
-    min-width: 100%;
     min-height: 400px;
 }
 
@@ -174,6 +173,23 @@ footer a {
 }
 
 /*Media Queries*/
+
+/*Small screens and up (576px)*/
+@media screen and (min-width:576px) {
+    #title-banner {
+        min-height: 220px;
+    } 
+    
+    #banner-overlay {
+        padding-top: 20px;
+    }
+    
+    #about-image {
+        min-height: 500px;
+        background-position: center 20%;
+    }
+}
+
 /*Medium screens and up (768px)*/
 @media screen and (min-width:768px) {
     #menu-btn {
@@ -192,4 +208,68 @@ footer a {
     .nav-link {
         padding-right: 10px;
     }
+
+    #about {
+        position: relative;
+    }
+
+    #about-image {
+        min-height: 600px;
+        position: absolute;
+        right: 10px;
+        top: 83px;   
+    }
+
+    #about2 {
+        position: absolute;
+        left: 10px;
+        top: 320px;
+        min-height: 436px;
+        padding: 0;
+        max-width: 336px;
+    }
+}
+
+/*To correct layout issue at 880px*/
+@media screen and (min-width:880px) {
+    #about2 {
+        top: 350px;
+    }   
+}
+
+/*Large screens and above (992px)*/
+@media screen and (min-width:992px) {
+    #about-image, #about2 {
+        position: static;
+    }
+
+    #about1 * {
+        margin-bottom: 30px;
+    }
+
+    #about2 {
+        padding: 0px 12px;
+        font-size: 0.9rem;
+        max-width: fit-content;
+        min-height: fit-content;
+    }
+
+    #about-image {
+        min-height: 393px;
+    }
+    
+}
+
+/*XL screens 1200px and up*/
+@media screen and (min-width:1200px) {
+    #about2 {
+        font-size: 1rem;
+    }
+
+
+}    
+
+/*Very large screens 1400px and up*/
+@media screen and (min-width:1400px) {
+  
 }
