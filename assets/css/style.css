@@ -64,8 +64,36 @@ body {
     width: 30px;
 }
 
+/*To push content down from behind the navbar*/
 main {
     margin-top: 56px;
+}
+
+/*Title Banner*/
+#title-banner {
+    background: url(../images/title-banner.jpg) no-repeat center bottom / cover ;
+    min-height: 193px;
+    padding: 0;
+}
+
+#banner-overlay {
+    background-color: rgba(34, 17, 51, .6);
+    min-height: inherit;
+    color: var(--accent-sand);
+    padding: 10px 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: var(--heading);
+}
+
+.lead {
+    font-family: var(--accent); 
+}
+
+#title-btns {
+    padding: 0;
 }
 
 /*Footer*/
@@ -99,6 +127,21 @@ footer a {
     color: var(--primary-light);
     font-size: 1.6rem;
     padding: 0;
+}
+
+.title-btn {
+    background-color: var(--accent-lilac);
+    color: var(--primary-dark);
+    text-transform: capitalize;
+    max-width: 130px;
+    font-weight: bold;
+    margin: 0 5px 5px 5px;
+}
+
+.title-btn:hover {
+    border: 3px solid var(--accent-lilac);
+    color: var(--accent-lilac);
+    background-color: transparent;
 }
 
 /*Media Queries*/

@@ -33,7 +33,7 @@
                     <a class="navbar-brand" href="index.html">
                         <img id="logo" src="assets/images/logo.png" alt="logo"> Charmed Arcana
                     </a>
-                    <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+                    <button id="menu-btn" aria-label="Menu button"><i class="fa-solid fa-bars"></i></button>
                     <div id="nav-menu" class="hidden">
                         <ul id="nav-links" class="navbar-nav text-end">
                             <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
@@ -45,13 +45,16 @@
             </nav>
         </header>
 
+        <!--Main Content-->
         <main>
-            <section id="title-banner" class="container">
-                <h1 id="title">Charmed Arcana</h1>
-                <p class="lead">Explore Tarot, Meditation and Sprirituality</p>
-                <div id="title-btns">
-                    <button id="email-modal" class="btn">Sign up to my newsletter</button>
-                    <a class="btn" href="tarot.html">Get your tarot reading</a>
+            <!--Title Banner-->
+            <section id="title-banner" class="container-fluid">
+                <div id="banner-overlay" class="container-fluid text-center">
+                    <h1 id="title" class="display-3">Charmed Arcana</h1>
+                    <p class="lead display-4">Explore Tarot, Meditation and Sprirituality</p>
+                    <div id="title-btns" class="container-fluid">
+                        <button id="email-modal" class="btn title-btn">Sign up to my newsletter</button>
+                    </div>
                 </div>
             </section>
         </main>
