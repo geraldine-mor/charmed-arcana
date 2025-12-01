@@ -20,8 +20,15 @@
 
 /*General Styles*/
 body {
-    background-color: var(--accent-blue);
+    background-color: var(--primary-light);
     font-family: var(--body);
+    color: var(--primary-dark);
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-family: var(--heading);
+    text-align: center;
 }
 
 /*Navbar*/
@@ -64,14 +71,15 @@ body {
     width: 30px;
 }
 
-/*To push content down from behind the navbar*/
+/*To push content from behind the navbar & footer*/
 main {
     margin-top: 56px;
+    margin-bottom: 57px;
 }
 
 /*Title Banner*/
 #title-banner {
-    background: url(../images/title-banner.jpg) no-repeat center bottom / cover ;
+    background: url(../images/title-banner.webp) no-repeat center bottom / cover ;
     min-height: 193px;
     padding: 0;
 }
@@ -83,17 +91,24 @@ main {
     padding: 10px 0;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-family: var(--heading);
-}
-
 .lead {
     font-family: var(--accent); 
 }
 
 #title-btns {
     padding: 0;
+}
+
+/*About Section*/
+#about h2 {
+    margin-top: 20px;
+}
+
+#about-image {
+    background: url(../images/about-image.webp) no-repeat center center / cover;
+    z-index: 100;
+    min-width: 100%;
+    min-height: 400px;
 }
 
 /*Footer*/
@@ -133,7 +148,7 @@ footer a {
     background-color: var(--accent-lilac);
     color: var(--primary-dark);
     text-transform: capitalize;
-    max-width: 130px;
+    max-width: fit-content;
     font-weight: bold;
     margin: 0 5px 5px 5px;
 }
@@ -142,6 +157,20 @@ footer a {
     border: 3px solid var(--accent-lilac);
     color: var(--accent-lilac);
     background-color: transparent;
+}
+
+.about-btn {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    display: block;
+    max-width: fit-content;
+    font-weight: 550;
+}
+
+.about-btn:hover {
+    background-color: transparent;
+    border: 3px solid var(--primary-dark);
+    color: var(--primary-dark);
 }
 
 /*Media Queries*/
@@ -153,6 +182,7 @@ footer a {
 
     #nav-menu {
         display: block;
+        min-width: 0;
     }
 
     #nav-links {
