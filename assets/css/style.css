@@ -104,6 +104,11 @@ main {
     margin-top: 20px;
 }
 
+#about h3 {
+    font-family: var(--accent);
+    font-size: 240%;
+}
+
 #about-image {
     background: url(../images/about-image.webp) no-repeat center 30% / cover;
     z-index: 100;
@@ -163,6 +168,7 @@ footer a {
     color: var(--primary-light);
     display: block;
     max-width: fit-content;
+    max-height: fit-content;
     font-weight: 550;
 }
 
@@ -187,6 +193,8 @@ footer a {
     #about-image {
         min-height: 500px;
         background-position: center 20%;
+        border-radius: 20px;
+        box-shadow: 4px 4px 10px rgba(34, 17, 51, .6);
     }
 }
 
@@ -209,33 +217,21 @@ footer a {
         padding-right: 10px;
     }
 
-    #about {
-        position: relative;
-    }
-
     #about-image {
-        min-height: 600px;
-        position: absolute;
-        right: 10px;
-        top: 83px;   
+        position: relative;
+        top: 20px;
+        min-height: 674px;
     }
 
     #about2 {
-        position: absolute;
-        left: 10px;
-        top: 320px;
-        min-height: 436px;
-        padding: 0;
-        max-width: 336px;
+        position: relative;
+        bottom: 298px;
     }
-}
 
-/*To correct layout issue at 880px*/
-@media screen and (min-width:880px) {
-    #about2 {
-        top: 350px;
-    }   
-}
+    #tablet-size {
+        max-height: 860px;
+    }
+}    
 
 /*Large screens and above (992px)*/
 @media screen and (min-width:992px) {
@@ -243,33 +239,32 @@ footer a {
         position: static;
     }
 
-    #about1 * {
-        margin-bottom: 30px;
-    }
-
     #about2 {
         padding: 0px 12px;
-        font-size: 0.9rem;
         max-width: fit-content;
-        min-height: fit-content;
+        /*min-height: fit-content;*/
     }
 
-    #about-image {
-        min-height: 393px;
-    }
-    
-}
-
-/*XL screens 1200px and up*/
-@media screen and (min-width:1200px) {
-    #about2 {
-        font-size: 1rem;
+    #about div {
+        min-height: 400px;
+        margin-bottom: auto;
     }
 
-
+    #services-btn {
+        margin-top: 49px;
+    }   
 }    
 
-/*Very large screens 1400px and up*/
+/*Extra Large screens and above (1200px)*/
+@media screen and (min-width:1200px) {
+    #services-btn {
+        margin-top: 30px;
+    }
+}
+
+/*XXLscreens and above (1400px)*/
 @media screen and (min-width:1400px) {
-  
+    #services-btn {
+        margin-top: 53px;
+    }
 }
