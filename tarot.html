@@ -50,7 +50,16 @@
                 <h1 class="display-3">Tarot Reading</h1>
                 <!--<h2 class="display-6">Reveal the cards for your personal reading</h2>-->
                 <div id="game-area">
-                    <img id="card-back" src="/assets/images/card-back.webp" alt="Back of a tarot card">
+                    <div class="card-flip mx-auto">
+                        <div class="card-flip-inner">
+                            <div class="card-flip-front">
+                                <img id="card-back" src="/assets/images/card-back.webp" alt="Back of a tarot card">
+                            </div>
+                            <div class="card-flip-back">
+                                <img id="game-card" src="/assets/images/the-magician.webp" alt="Tarot card depicting the magician">
+                            </div>
+                        </div>
+                    </div>
                     <button id="game-btn" class="btn">Reveal the first card (Past)</button>
                     <p id="game-text" class="hidden text-center mx-auto">Placeholder text for layout and testing
                         purposes</p>

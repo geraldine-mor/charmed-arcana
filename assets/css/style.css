@@ -132,10 +132,9 @@ main {
     font-size: 0.8rem;
 }
 
-#card-back {
-    height:50vh;
-    display: block;
-    margin: auto;
+#card-back, #game-card {
+    height:335px;
+    width: 192.42px;
     border-radius: 10px;
 }
 
@@ -144,6 +143,33 @@ main {
     max-width: 90%;
     font-family: var(--accent);
     font-size: 1.5rem;
+}
+
+/*Card Flip Action*/
+.card-flip {
+    height: 335px;
+    width: 191.42px;
+    perspective: 1000px;
+}
+
+.card-flip-inner {
+    position: relative;
+    transition: all 1.2s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+    transform: rotateY(-180deg);
+}
+
+.card-flip-front, .card-flip-back {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card-flip-back {
+    transform: rotateY(-180deg);
 }
 
 /*Footer*/
@@ -161,8 +187,7 @@ footer a {
 .socials i {
     display: inline-block;
     perspective: 300px;
-    transform: rotateY(0deg);
-    transition: all 1.2s ease;
+    transition: all 1.2s;
 }
 
 .socials i:hover {
