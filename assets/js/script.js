@@ -17,7 +17,32 @@ document.addEventListener("DOMContentLoaded", function() {
 /**
  * The game loop called when the game button is first clicked
  */
+let clicks = 0; //defined outside the function so it doesn't reset every time
 function tarotGame() {
-    document.getElementById("card-flip").classList.add("flipped");
-    document.getElementById("game-text").classList.toggle("hidden");
+
+    let gameBtn = document.getElementById("game-btn");
+
+        if (clicks === 0) {
+            document.getElementById("card-flip").classList.add("flipped");
+            document.getElementById("game-text").classList.remove("hidden");
+            gameBtn.innerText = "Draw next card";
+            clicks++;
+        } else if (clicks === 1) {
+            document.getElementById("card-flip").classList.remove("flipped");
+            gameBtn.innerText = "Reveal the second card (Present)";
+            clicks++;
+        }
 }
+
+
+
+
+    
+    
+    
+            
+    
+
+
+   
+
