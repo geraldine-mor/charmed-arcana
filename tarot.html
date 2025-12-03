@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Charmed Arcana tarot reading game, get a tarot reading">
+        <meta name="keywords"
+            content="Charmed Arcana, tarot, tarot cards, tarot reading, tarot reader, wellness, meditation">
+
+        <!--Favicon created using favicon.io, icon from flaticon.com credit: vectorsmarket15 - eye -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+        <!--Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <!--Custom CSS-->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <title>Charmed Arcana | Tarot Reading</title>
+
+    </head>
+
+    <body>
+        <!--Collapsible navbar-->
+        <header>
+            <nav class="navbar fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img id="logo" src="assets/images/logo.png" alt="logo"> Charmed Arcana
+                    </a>
+                    <button id="menu-btn" aria-label="Menu button"><i class="fa-solid fa-bars"></i></button>
+                    <div id="nav-menu" class="hidden">
+                        <ul id="nav-links" class="navbar-nav text-end">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="tarot.html" class="nav-link active">Tarot Reading</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main id="tarot-main">
+            <section id="game-container">
+                <h1 class="display-3">Tarot Reading</h1>
+                <!--<h2 class="display-6">Reveal the cards for your personal reading</h2>-->
+                <div id="game-area">
+                    <img id="card-back" src="/assets/images/card-back.webp" alt="Back of a tarot card">
+                    <button id="game-btn" class="btn">Reveal the first card (Past)</button>
+                    <p id="game-text" class="hidden text-center mx-auto">Placeholder text for layout and testing
+                        purposes</p>
+                </div>
+                <p class="text-center"><em>*This tarot reading is a game and is for fun purposes only, feedback provided
+                        should not be taken too seriously*</em></p>
+            </section>
+        </main>
+
+        <!--Footer-->
+        <footer class="mt-auto fixed-bottom">
+            <div id="social-links" class="d-flex justify-content-evenly my-2">
+                <a class="socials" href="https://www.facebook.com" rel="noopener" target="_blank"
+                    aria-label="Follow me on Facebook (link opens in a new tab)"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a class="socials" href="https://www.tiktok.com" rel="noopener" target="_blank"
+                    aria-label="Follow me on TikTok (link opens in a new tab)"><i class="fa-brands fa-tiktok"></i></a>
+                <a class="socials" href="https://www.youtube.com" rel="noopener" target="_blank"
+                    aria-label="Check out my YouTube channel (link opens in a new tab)"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a class="socials" href="https://www.x.com" rel="noopener" target="_blank"
+                    aria-label="Follow me on X (link opens in a new tab)">
+                    <i class="fa-brands fa-x-twitter"></i></a>
+                <a class="socials" href="https://www.instagram.com" rel="noopener" target="_blank"
+                    aria-label="Follow me on Instagram (link opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
+
+        <!--Fontawesome-->
+        <script src="https://kit.fontawesome.com/b556357a62.js" crossorigin="anonymous"></script>
+
+        <!--Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+        <!--Custom JS-->
+        <script src="assets/js/script.js"></script>
+
+    </body>
+
+</html>

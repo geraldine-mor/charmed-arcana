@@ -115,6 +115,37 @@ main {
     min-height: 400px;
 }
 
+/*Tarot Game Page*/
+#tarot-main {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--accent-sand);
+    padding-top: 10px;
+}
+
+#game-container h2 {
+    font-family: var(--accent);
+    text-transform: capitalize;
+}
+
+#game-container > p {
+    font-size: 0.8rem;
+}
+
+#card-back {
+    height:50vh;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#game-text {
+    display: block;
+    max-width: 90%;
+    font-family: var(--accent);
+    font-size: 1.5rem;
+}
+
 /*Footer*/
 footer {
     background-color: var(--primary-dark);
@@ -176,6 +207,16 @@ footer a {
     background-color: transparent;
     border: 3px solid var(--primary-dark);
     color: var(--primary-dark);
+}
+
+#game-btn {
+    background-color: var(--primary-dark);
+    color: var(--accent-sand);
+    width: 170px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 /*Media Queries*/
