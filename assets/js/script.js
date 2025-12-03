@@ -7,4 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     navBtn.addEventListener("click", function() {
         document.getElementById("nav-menu").classList.toggle("hidden");
     })
+
+    //Get the card game button and apply event listener
+    let gameBtn = document.getElementById("game-btn");
+
+    gameBtn.addEventListener("click", tarotGame);
 })
+
+/**
+ * The game loop called when the game button is first clicked
+ */
+function tarotGame() {
+    document.getElementById("card-flip").classList.add("flipped");
+    document.getElementById("game-text").classList.toggle("hidden");
+}
