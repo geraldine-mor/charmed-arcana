@@ -142,7 +142,7 @@ main {
     margin: auto;
 }
 
-#past-text p {
+.game-text {
     max-width: 90%;
     font-family: var(--accent);
     font-size: 1.5rem;
@@ -247,7 +247,7 @@ footer a {
     color: var(--accent-sand);
     width: 170px;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 10px;
     font-weight: 600;
 }

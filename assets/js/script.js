@@ -94,7 +94,11 @@ function tarotGame() {
             document.getElementById("left-card-flip").classList.remove("flipped");
             document.getElementById("middle-card-flip").classList.remove("flipped");
             document.getElementById("right-card-flip").classList.remove("flipped");
+            document.getElementById("past-text").classList.add("hidden");
+            document.getElementById("present-text").classList.add("hidden");
+            document.getElementById("future-text").classList.add("hidden");
             gameBtn.innerText = "Reveal First Card"
+            clicks = 0;
         }
 }
 
