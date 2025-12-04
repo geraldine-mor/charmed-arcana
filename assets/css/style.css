@@ -124,7 +124,7 @@ main {
 }
 
 #game-container h2 {
-    font-family: var(--accent);
+    font-family: var(--heading);
     text-transform: capitalize;
 }
 
@@ -142,7 +142,7 @@ main {
     margin: auto;
 }
 
-#game-text {
+#past-text p {
     max-width: 90%;
     font-family: var(--accent);
     font-size: 1.5rem;

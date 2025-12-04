@@ -48,13 +48,13 @@
         <main id="tarot-main">
             <section id="game-container">
                 <h1 class="display-3">Tarot Reading</h1>
-                <!--<h2 class="display-6">Reveal the cards for your personal reading</h2>-->
                 <div id="game-area" class="container">
                     <div class="row">
                         <div id="left-card-flip" class="card-flip mx-auto col-12 col-md-4">
                             <div id="left-card-flip-inner" class="card-flip-inner">
                                 <div id="left-card-flip-front" class="card-flip-front">
-                                    <img id="left-card-back" src="assets/images/card-back.webp" alt="Back of a tarot card">
+                                    <img id="left-card-back" src="assets/images/card-back.webp"
+                                        alt="Back of a tarot card">
                                 </div>
                                 <div id="left-card-flip-back" class="card-flip-back">
                                     <img id="left-game-card" src="assets/images/the-magician.webp"
@@ -65,7 +65,8 @@
                         <div id="middle-card-flip" class="card-flip mx-auto col-12 col-md-4 hidden">
                             <div id="middle-card-flip-inner" class="card-flip-inner">
                                 <div id="middle-card-flip-front" class="card-flip-front">
-                                    <img id="middle-card-back" src="assets/images/card-back.webp" alt="Back of a tarot card">
+                                    <img id="middle-card-back" src="assets/images/card-back.webp"
+                                        alt="Back of a tarot card">
                                 </div>
                                 <div id="middle-card-flip-back" class="card-flip-back">
                                     <img id="middle-game-card" src="assets/images/the-magician.webp"
@@ -76,7 +77,8 @@
                         <div id="right-card-flip" class="card-flip mx-auto col-12 col-md-4 hidden">
                             <div id="right-card-flip-inner" class="card-flip-inner">
                                 <div id="right-card-flip-front" class="card-flip-front">
-                                    <img id="right-card-back" src="assets/images/card-back.webp" alt="Back of a tarot card">
+                                    <img id="right-card-back" src="assets/images/card-back.webp"
+                                        alt="Back of a tarot card">
                                 </div>
                                 <div id="right-card-flip-back" class="card-flip-back">
                                     <img id="right-game-card" src="assets/images/the-magician.webp"
@@ -87,9 +89,26 @@
                     </div>
                 </div>
                 <div>
-                    <button id="game-btn" class="btn">Reveal the first card (Past)</button>
-                    <p id="game-text" class="hidden text-center mx-auto">Placeholder text for layout and testing
-                        purposes</p>
+                    <button id="game-btn" class="btn">Reveal First Card</button>
+                    <div class="container">
+                        <div class="row">
+                            <div id="past-text" class="hidden col-md-4">
+                                <h2>Past</h2>
+                                <p class="text-center mx-auto">Placeholder text for layout and testing
+                                    purposes</p>
+                            </div>
+                            <div id="present-text" class="hidden col-md-4">
+                                <h2>Present</h2>
+                                <p class="text-center mx-auto">Placeholder text for layout and testing
+                                    purposes</p>
+                            </div>
+                            <div id="future-text" class="hidden col-md-4">
+                                <h2>Future</h2>
+                                <p class="text-center mx-auto">Placeholder text for layout and testing
+                                    purposes</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p class="text-center"><em>*This tarot reading is a game and is for fun purposes only, feedback provided
                         should not be taken too seriously*</em></p>
