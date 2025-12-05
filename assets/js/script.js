@@ -179,10 +179,9 @@ function tarotMobile() {
             currentIndex = 2;
             slideCards();
             gameBtn.innerText = "Reveal Third Card";
-             maxRevealedIndex = 2;
+            maxRevealedIndex = 2;
             clicks++;  
-            removeArrowRight();  
-
+            
         } else if (clicks === 4) {
             //Third card - generate random number
             let i = Math.floor(Math.random()*6);
@@ -233,11 +232,13 @@ function slideCards() {
     } else if (currentIndex === 1) {
 
         document.getElementById("slide-strip").classList.add("slide-middle");
+        document.getElementById("slide-strip").classList.remove("slide-right");
 
     } else if (currentIndex === 2) {
 
         document.getElementById("slide-strip").classList.remove("slide-middle");
         document.getElementById("slide-strip").classList.add("slide-right");
+        removeArrowRight(); 
     }
 }
 
