@@ -32,12 +32,18 @@ let maxRevealedIndex = 0;
 
 //defined in the global scope to be available to both game variations
 const cards = [
-    { src: "assets/images/death.webp", alt: "Tarot card depicting death", },
-    { src: "assets/images/judgement.webp", alt: "Tarot card depicting judgement" },
-    { src: "assets/images/justice.webp", alt: "Tarot card depicting justice" },
-    { src: "assets/images/strength.webp", alt: "Tarot card depicting strength" },
-    { src: "assets/images/temperance.webp", alt: "Tarot card depicting temperance" },
-    { src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician" },
+    { src: "assets/images/death.webp", alt: "Tarot card depicting death", 
+        text: "Most times, people take the name of the card literally. However, the real meaning within the Death card is one of the most positive in the whole deck. The Death card signals that one major phase in your life is ending, and a new one is going to start. You just need to close one door, so the new one will open."},
+    { src: "assets/images/judgement.webp", alt: "Tarot card depicting judgement", 
+        text: "The traditional Judgement meaning focuses on the moment when we reflect and evaluate ourselves and our actions. To see this card can also indicate that you are in a period of awakening, brought on by the act of self-reflection."},
+    { src: "assets/images/justice.webp", alt: "Tarot card depicting justice",
+        text: "Justice signals that a  judgement will be made. The decisions that you make now have long-term effects in all things, both for yourself and others. If you have been wronged, this card's appearance may bring you relief. On the other hand, if your actions caused pain to others, this card serves as a warning."},
+    { src: "assets/images/strength.webp", alt: "Tarot card depicting strength",
+        text: "This card shows that you have the inner strength and fortitude you need to see you through moments of danger and distress. Your resilience will greatly aid you, and your fearlessness means that you should have no issues speaking your mind."},
+    { src: "assets/images/temperance.webp", alt: "Tarot card depicting temperance",
+        text: "The Temperance tarot card suggests moderation and balance, coupled with a lot of patience. It implies that you have a clear vision and know what you want to achieve. It may also indicate a time to evaluate and re-examine the priorities you have chosen, to find more balance with your inner self."},
+    { src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician",
+        text: "The magician is the representation of pure willpower. The time is right to tap into your full potentail. Remember that you are powerful, create your inner world, and the outer will follow."},
 ]
 
 /**
@@ -194,6 +200,7 @@ function flipLeft() {
     document.getElementById("left-game-card").setAttribute("alt", card.alt);
     document.getElementById("left-card-flip").classList.add("flipped");
     document.getElementById("past-text").classList.remove("hidden");
+    document.getElementById("past-text-content").innerText = card.text;
 }
 
 /**
@@ -204,6 +211,7 @@ function flipMiddle() {
     document.getElementById("middle-game-card").setAttribute("alt", card.alt);
     document.getElementById("middle-card-flip").classList.add("flipped");
     document.getElementById("present-text").classList.remove("hidden");
+    document.getElementById("present-text-content").innerText = card.text;
 }
 
 /**
@@ -214,6 +222,7 @@ function flipRight() {
     document.getElementById("right-game-card").setAttribute("alt", card.alt);
     document.getElementById("right-card-flip").classList.add("flipped");
     document.getElementById("future-text").classList.remove("hidden");
+    document.getElementById("future-text-content").innerText = card.text;
 }
 
 /**
