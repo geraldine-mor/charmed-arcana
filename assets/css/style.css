@@ -145,7 +145,8 @@ main {
 .game-text {
     width: 100vw;
     font-family: var(--accent);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 0 5px;
 }
 
 /*Card Flip Action*/
@@ -186,6 +187,11 @@ main {
     width: 100vw;
     margin: auto;
     position: relative;
+}
+
+#slide-strip {
+    height: 365px;
+    align-items: center;
 }
 
 #slide-strip, #text-slide {
@@ -347,12 +353,16 @@ footer a {
         max-height: 860px;
     }
 
-    #card-container {
+    #card-container, #text-container {
         width: 100%;
     }
 
-    #slide-strip {
+    #slide-strip, #text-slide {
         width: auto;
+    }
+
+    .game-text {
+        width: 33vw;
     }
 }    
 
@@ -376,12 +386,30 @@ footer a {
     #services-btn {
         margin-top: 49px;
     }   
+
+    #game-container {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .game-text {
+        width: 30vw;
+    }
 }    
 
 /*Extra Large screens and above (1200px)*/
 @media screen and (min-width:1200px) {
     #services-btn {
         margin-top: 30px;
+    }
+
+    #game-container {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .game-text {
+        width: 26.66vw;
     }
 }
 

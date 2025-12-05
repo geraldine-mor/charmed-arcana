@@ -83,6 +83,7 @@ function tarotGame() {
     } else if (clicks === 3) {
 
         gameReset();
+        gameBtn.innerText = "Reveal First Card"
 
     }
 }
@@ -163,6 +164,8 @@ function tarotMobile() {
 
     } else if (clicks === 5) {
         gameReset();
+        gameBtn.innerText = "Reveal First Card"
+        navigationArrows();
     }
 }
 /**
@@ -224,7 +227,6 @@ function gameReset() {
     document.getElementById("past-text").classList.add("hidden");
     document.getElementById("present-text").classList.add("hidden");
     document.getElementById("future-text").classList.add("hidden");
-    gameBtn.innerText = "Reveal First Card"
 
     //Remove all stored data from variables
     clicks = 0;
