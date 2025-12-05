@@ -183,22 +183,22 @@ main {
 /*To slide next card in from the right on mobile game*/
 #card-container {
     overflow: hidden;
-    width: 192.42px;
+    width: 100vw;
     margin: auto;
 }
 
 #slide-strip {
     display: flex;
     transition: transform 1s ease;
-    width: 574.26px;
+    width: 300vw;
 }
 
 .slide-middle {
-    transform: translateX(-192.42px);
+    transform: translateX(-100vw);
 }
 
 .slide-right {
-    transform: translateX(-384.84px);
+    transform: translateX(-200vw);
 }
 
 /*Footer*/
