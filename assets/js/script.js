@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let clicks = 0; 
 let usedCards = [];
 let currentIndex = 0;
+let maxRevealedIndex = 0;
 
 /**
  * The game loop called when the game button is first clicked
@@ -140,6 +141,7 @@ function tarotMobile() {
             slideCards();
             arrowLeft();
             gameBtn.innerText = "Reveal Second Card";
+            maxRevealedIndex = 1;
             clicks++;
             
 
@@ -177,7 +179,9 @@ function tarotMobile() {
             currentIndex = 2;
             slideCards();
             gameBtn.innerText = "Reveal Third Card";
-            clicks++;    
+             maxRevealedIndex = 2;
+            clicks++;  
+            removeArrowRight();  
 
         } else if (clicks === 4) {
             //Third card - generate random number
@@ -190,12 +194,19 @@ function tarotMobile() {
                 card = cards[i];
             }
 
+            if (currentIndex != 2) {
+
+                currentIndex = 2;
+                slideCards();
+
+            } else {
             document.getElementById("right-game-card").setAttribute("src", card.src);
             document.getElementById("right-game-card").setAttribute("alt", card.alt);
             document.getElementById("right-card-flip").classList.add("flipped");
             document.getElementById("future-text").classList.remove("hidden");
             gameBtn.innerText = "Reset The Cards"; 
             clicks++;
+            }
 
         } else if (clicks === 5) {
             //Reset the game
@@ -227,7 +238,6 @@ function slideCards() {
 
         document.getElementById("slide-strip").classList.remove("slide-middle");
         document.getElementById("slide-strip").classList.add("slide-right");
-
     }
 }
 
@@ -240,7 +250,6 @@ function arrowLeft() {
     
     leftGameArrow.classList.remove("hidden");
     leftGameArrow.addEventListener("click", decreaseCurrentIndex);
-
 }
 
 /**
@@ -269,6 +278,15 @@ function decreaseCurrentIndex() {
  * Slide right to previously revealed cards
  */
 function increaseCurrentIndex() {
+    if (currentIndex < maxRevealedIndex) {
     ++currentIndex;
     slideCards();
+    } 
+}
+
+/**
+ * Remove right arrow on last card
+ */
+function removeArrowRight() {
+    document.getElementById("arrow-right").classList.add("hidden");
 }
