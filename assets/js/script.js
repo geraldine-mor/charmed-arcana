@@ -32,19 +32,19 @@ let maxRevealedIndex = 0;
 
 //defined in the global scope to be available to both game variations
 const cards = [
-        { src: "assets/images/death.webp", alt: "Tarot card depicting death", },
-        { src: "assets/images/judgement.webp", alt: "Tarot card depicting judgement" },
-        { src: "assets/images/justice.webp", alt: "Tarot card depicting justice" },
-        { src: "assets/images/strength.webp", alt: "Tarot card depicting strength" },
-        { src: "assets/images/temperance.webp", alt: "Tarot card depicting temperance" },
-        { src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician" },
+    { src: "assets/images/death.webp", alt: "Tarot card depicting death", },
+    { src: "assets/images/judgement.webp", alt: "Tarot card depicting judgement" },
+    { src: "assets/images/justice.webp", alt: "Tarot card depicting justice" },
+    { src: "assets/images/strength.webp", alt: "Tarot card depicting strength" },
+    { src: "assets/images/temperance.webp", alt: "Tarot card depicting temperance" },
+    { src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician" },
 ]
 
 /**
  * The game loop called when the game button is first clicked
  */
 function tarotGame() {
-    
+
     let gameBtn = document.getElementById("game-btn");
 
     if (clicks === 0) {
@@ -81,7 +81,7 @@ function tarotGame() {
         clicks++;
 
     } else if (clicks === 3) {
-        
+
         gameReset();
 
     }
@@ -91,7 +91,7 @@ function tarotGame() {
  * The game optimised for mobile 
  */
 function tarotMobile() {
-    
+
     let gameBtn = document.getElementById("game-btn");
 
     if (clicks === 0) {
@@ -227,7 +227,7 @@ function gameReset() {
     gameBtn.innerText = "Reveal First Card"
 
     //Remove all stored data from variables
-    clicks = 0; 
+    clicks = 0;
     currentIndex = 0;
     maxRevealedIndex = 0;
     usedCards = [];
@@ -242,17 +242,22 @@ function slideCards() {
 
         document.getElementById("slide-strip").classList.remove("slide-middle");
         document.getElementById("slide-strip").classList.remove("slide-right");
-        document.getElementById("arrow-left").classList.add("hidden");
+        document.getElementById("text-slide").classList.remove("slide-middle");
+        document.getElementById("text-slide").classList.remove("slide-right");
 
     } else if (currentIndex === 1) {
 
         document.getElementById("slide-strip").classList.add("slide-middle");
         document.getElementById("slide-strip").classList.remove("slide-right");
+        document.getElementById("text-slide").classList.add("slide-middle");
+        document.getElementById("text-slide").classList.remove("slide-right");
 
     } else if (currentIndex === 2) {
 
         document.getElementById("slide-strip").classList.remove("slide-middle");
         document.getElementById("slide-strip").classList.add("slide-right");
+        document.getElementById("text-slide").classList.remove("slide-middle");
+        document.getElementById("text-slide").classList.add("slide-right");
     }
 
     navigationArrows();

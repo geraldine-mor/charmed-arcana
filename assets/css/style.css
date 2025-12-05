@@ -143,7 +143,7 @@ main {
 }
 
 .game-text {
-    max-width: 90%;
+    width: 100vw;
     font-family: var(--accent);
     font-size: 1.5rem;
 }
@@ -181,14 +181,14 @@ main {
 }
 
 /*To slide next card in from the right on mobile game*/
-#card-container {
+#card-container, #text-container {
     overflow: hidden;
     width: 100vw;
     margin: auto;
     position: relative;
 }
 
-#slide-strip {
+#slide-strip, #text-slide {
     display: flex;
     transition: transform 1s ease;
     width: 300vw;
@@ -200,10 +200,6 @@ main {
 
 .slide-right {
     transform: translateX(-200vw);
-}
-
-.previous {
-    transform: translateX(25vw);
 }
 
 /*Footer*/
