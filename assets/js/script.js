@@ -120,8 +120,8 @@ function tarotMobile() {
         {src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician"},
     ]
 
-    let gameBtn = document.getElementById("game-btn");    
-        
+    let gameBtn = document.getElementById("game-btn"); 
+           
         if (clicks === 0) {
             //First card - any random number
             let i = Math.floor(Math.random()*6);
@@ -139,7 +139,6 @@ function tarotMobile() {
 
             currentIndex = 1;
             slideCards();
-            arrowLeft();
             gameBtn.innerText = "Reveal Second Card";
             maxRevealedIndex = 1;
             clicks++;
@@ -224,10 +223,12 @@ function tarotMobile() {
  * Card slide function to allow for improved game experience on mobile
  */
 function slideCards() {
+    
     if (currentIndex === 0) {
 
         document.getElementById("slide-strip").classList.remove("slide-middle");
         document.getElementById("slide-strip").classList.remove("slide-right");
+        document.getElementById("arrow-left").classList.add("hidden");
 
     } else if (currentIndex === 1) {
 
@@ -238,30 +239,32 @@ function slideCards() {
 
         document.getElementById("slide-strip").classList.remove("slide-middle");
         document.getElementById("slide-strip").classList.add("slide-right");
-        removeArrowRight(); 
     }
+
+    navigationArrows();
 }
 
-/**
- * Display left navigation arrow and apply event listener
- */
-function arrowLeft() {
+function navigationArrows() {
 
-    let leftGameArrow = document.getElementById("arrow-left");
-    
-    leftGameArrow.classList.remove("hidden");
-    leftGameArrow.addEventListener("click", decreaseCurrentIndex);
-}
+    const arrowLeft = document.getElementById("arrow-left");
+    const arrowRight = document.getElementById("arrow-right");
 
-/**
- * Display right navigation arrow and apply event listener
- */
-function arrowRight() {
+    //Left arrow shows only when left scroll is appropriate
+    if (currentIndex > 0) {
+        arrowLeft.classList.remove("hidden");
+        arrowLeft.addEventListener("click", decreaseCurrentIndex)
+    } else {
+        arrowLeft.classList.add("hidden");
+    }
 
-    let rightGameArrow = document.getElementById("arrow-right");
+    //Right arrow shows only when right scroll is appropriate
+    if (currentIndex < maxRevealedIndex) {
+        arrowRight.classList.remove("hidden");
+        arrowRight.addEventListener("click", increaseCurrentIndex)
+    } else {
+        arrowRight.classList.add("hidden");
+    }
 
-    rightGameArrow.classList.remove("hidden");
-    rightGameArrow.addEventListener("click", increaseCurrentIndex);
 }
 
 /**
@@ -271,7 +274,6 @@ function decreaseCurrentIndex() {
     if (currentIndex > 0) {
         --currentIndex;
         slideCards();
-        arrowRight();
     }
 }
 
@@ -283,11 +285,4 @@ function increaseCurrentIndex() {
     ++currentIndex;
     slideCards();
     } 
-}
-
-/**
- * Remove right arrow on last card
- */
-function removeArrowRight() {
-    document.getElementById("arrow-right").classList.add("hidden");
 }
