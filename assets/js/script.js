@@ -11,7 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
     //Get the card game button and apply event listener
     let gameBtn = document.getElementById("game-btn");
 
-    gameBtn.addEventListener("click", tarotGame);
+    if (screen.width < 768) {
+
+        gameBtn.addEventListener("click", tarotMobile);
+
+    } else {
+
+        gameBtn.addEventListener("click", tarotGame);
+
+    }    
 
 })
 
@@ -33,10 +41,7 @@ function tarotGame() {
         {src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician"},
     ]
 
-    let gameBtn = document.getElementById("game-btn");
-    
-    const screenWidth = screen.width;
-    
+    let gameBtn = document.getElementById("game-btn");    
         
         if (clicks === 0) {
             //First card - any random number
@@ -90,6 +95,98 @@ function tarotGame() {
             clicks++;
 
         } else if (clicks === 3) {
+            //Reset the game
+            document.getElementById("left-card-flip").classList.remove("flipped");
+            document.getElementById("middle-card-flip").classList.remove("flipped");
+            document.getElementById("right-card-flip").classList.remove("flipped");
+            document.getElementById("past-text").classList.add("hidden");
+            document.getElementById("present-text").classList.add("hidden");
+            document.getElementById("future-text").classList.add("hidden");
+            gameBtn.innerText = "Reveal First Card"
+            clicks = 0;
+        }
+}
+
+/**
+ * The game optimised for mobile 
+ */
+function tarotMobile() {
+    const cards = [
+        {src: "assets/images/death.webp", alt: "Tarot card depicting death",},
+        {src: "assets/images/judgement.webp", alt: "Tarot card depicting judgement"},
+        {src: "assets/images/justice.webp", alt: "Tarot card depicting justice"},
+        {src: "assets/images/strength.webp", alt: "Tarot card depicting strength"},
+        {src: "assets/images/temperance.webp", alt: "Tarot card depicting temperance"},
+        {src: "assets/images/the-magician.webp", alt: "Tarot card depicting the magician"},
+    ]
+
+    let gameBtn = document.getElementById("game-btn");    
+        
+        if (clicks === 0) {
+            //First card - any random number
+            let i = Math.floor(Math.random()*6);
+            let card = cards[i];
+            usedCards.push(card.src); //Store used card
+
+            document.getElementById("left-game-card").setAttribute("src", card.src);
+            document.getElementById("left-game-card").setAttribute("alt", card.alt);
+            document.getElementById("left-card-flip").classList.add("flipped");
+            document.getElementById("past-text").classList.remove("hidden");
+            gameBtn.innerText = "Draw Next Card";
+            clicks++;
+
+        } else if (clicks === 1) {  
+
+            document.getElementById("slide-strip").classList.add("slide-middle");
+            gameBtn.innerText = "Reveal Second Card";
+            clicks++;
+            
+
+        } else if (clicks === 2) {
+            //Second card - generate random number
+            let i = Math.floor(Math.random()*6);
+            let card = cards[i];
+
+            //Check number not in use and generate a new one if needed
+            while (usedCards.includes(card.src)) { 
+                i = Math.floor(Math.random()*6);
+                card = cards[i];
+            }
+
+            usedCards.push(card.src); //Store used card
+
+            document.getElementById("middle-game-card").setAttribute("src", card.src);
+            document.getElementById("middle-game-card").setAttribute("alt", card.alt);
+            document.getElementById("middle-card-flip").classList.add("flipped");
+            document.getElementById("present-text").classList.remove("hidden");
+            gameBtn.innerText = "Draw Next Card";    
+            clicks++;
+
+         } else if (clicks === 3) {  
+
+            document.getElementById("slide-strip").classList.add("slide-right");
+            gameBtn.innerText = "Reveal Third Card";
+            clicks++;    
+
+        } else if (clicks === 4) {
+            //Third card - generate random number
+            let i = Math.floor(Math.random()*6);
+            let card = cards[i];
+
+            //Check number not in use and generate a new one if needed
+            while (usedCards.includes(card.src)) { 
+                i = Math.floor(Math.random()*6);
+                card = cards[i];
+            }
+
+            document.getElementById("right-game-card").setAttribute("src", card.src);
+            document.getElementById("right-game-card").setAttribute("alt", card.alt);
+            document.getElementById("right-card-flip").classList.add("flipped");
+            document.getElementById("future-text").classList.remove("hidden");
+            gameBtn.innerText = "Reset The Cards"; 
+            clicks++;
+
+        } else if (clicks === 5) {
             //Reset the game
             document.getElementById("left-card-flip").classList.remove("flipped");
             document.getElementById("middle-card-flip").classList.remove("flipped");

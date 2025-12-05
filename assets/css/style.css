@@ -180,6 +180,27 @@ main {
     transform: rotateY(-180deg);
 }
 
+/*To slide next card in from the right on mobile game*/
+#card-container {
+    overflow: hidden;
+    width: 192.42px;
+    margin: auto;
+}
+
+#slide-strip {
+    display: flex;
+    transition: transform 1s ease;
+    width: 574.26px;
+}
+
+.slide-middle {
+    transform: translateX(-192.42px);
+}
+
+.slide-right {
+    transform: translateX(-384.84px);
+}
+
 /*Footer*/
 footer {
     background-color: var(--primary-dark);
@@ -306,8 +327,12 @@ footer a {
         max-height: 860px;
     }
 
-    #middle-card-flip, #right-card-flip {
-        display: block;
+    #card-container {
+        width: 100%;
+    }
+
+    #slide-strip {
+        width: auto;
     }
 }    
 
