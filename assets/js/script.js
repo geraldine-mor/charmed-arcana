@@ -19,14 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         gameBtn.addEventListener("click", tarotGame);
 
-    }    
-
+    }   
 })
-
 
 //defined outside the function so it doesn't reset every time
 let clicks = 0; 
 let usedCards = [];
+let currentIndex = 0;
 
 /**
  * The game loop called when the game button is first clicked
@@ -137,7 +136,9 @@ function tarotMobile() {
 
         } else if (clicks === 1) {  
 
-            document.getElementById("slide-strip").classList.add("slide-middle");
+            currentIndex = 1;
+            slideCards();
+            arrowLeft();
             gameBtn.innerText = "Reveal Second Card";
             clicks++;
             
@@ -153,7 +154,14 @@ function tarotMobile() {
                 card = cards[i];
             }
 
-            usedCards.push(card.src); //Store used card
+            usedCards.push(card.src); //Store used cards
+            
+            if (currentIndex != 1) {
+
+                currentIndex = 1;
+                slideCards();
+            
+            } else {            
 
             document.getElementById("middle-game-card").setAttribute("src", card.src);
             document.getElementById("middle-game-card").setAttribute("alt", card.alt);
@@ -162,9 +170,12 @@ function tarotMobile() {
             gameBtn.innerText = "Draw Next Card";    
             clicks++;
 
-         } else if (clicks === 3) {  
+            }
 
-            document.getElementById("slide-strip").classList.add("slide-right");
+        } else if (clicks === 3) {  
+
+            currentIndex = 2;
+            slideCards();
             gameBtn.innerText = "Reveal Third Card";
             clicks++;    
 
@@ -199,15 +210,65 @@ function tarotMobile() {
         }
 }
 
+/**
+ * Card slide function to allow for improved game experience on mobile
+ */
+function slideCards() {
+    if (currentIndex === 0) {
 
+        document.getElementById("slide-strip").classList.remove("slide-middle");
+        document.getElementById("slide-strip").classList.remove("slide-right");
 
+    } else if (currentIndex === 1) {
 
+        document.getElementById("slide-strip").classList.add("slide-middle");
+
+    } else if (currentIndex === 2) {
+
+        document.getElementById("slide-strip").classList.remove("slide-middle");
+        document.getElementById("slide-strip").classList.add("slide-right");
+
+    }
+}
+
+/**
+ * Display left navigation arrow and apply event listener
+ */
+function arrowLeft() {
+
+    let leftGameArrow = document.getElementById("arrow-left");
     
-    
-    
-            
-    
+    leftGameArrow.classList.remove("hidden");
+    leftGameArrow.addEventListener("click", decreaseCurrentIndex);
 
+}
 
-   
+/**
+ * Display right navigation arrow and apply event listener
+ */
+function arrowRight() {
 
+    let rightGameArrow = document.getElementById("arrow-right");
+
+    rightGameArrow.classList.remove("hidden");
+    rightGameArrow.addEventListener("click", increaseCurrentIndex);
+}
+
+/**
+ * Slide left to previously viewed cards
+ */
+function decreaseCurrentIndex() {
+    if (currentIndex > 0) {
+        --currentIndex;
+        slideCards();
+        arrowRight();
+    }
+}
+
+/**
+ * Slide right to previously revealed cards
+ */
+function increaseCurrentIndex() {
+    ++currentIndex;
+    slideCards();
+}

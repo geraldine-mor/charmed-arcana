@@ -185,6 +185,7 @@ main {
     overflow: hidden;
     width: 100vw;
     margin: auto;
+    position: relative;
 }
 
 #slide-strip {
@@ -199,6 +200,10 @@ main {
 
 .slide-right {
     transform: translateX(-200vw);
+}
+
+.previous {
+    transform: translateX(25vw);
 }
 
 /*Footer*/
@@ -271,6 +276,25 @@ footer a {
     margin: 20px auto;
     border-radius: 10px;
     font-weight: 600;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 40%;
+    border: none;
+    color: var(--primary-dark);
+    background-color: transparent;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 2000;
+}
+
+#arrow-left {
+    left: 10px;
+}
+
+#arrow-right {
+    right: 10px;
 }
 
 /*Media Queries*/
