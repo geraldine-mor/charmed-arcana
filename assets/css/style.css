@@ -23,6 +23,7 @@ body {
     background-color: var(--primary-light);
     font-family: var(--body);
     color: var(--primary-dark);
+    min-height: 100vh;
 }
 
 h1, h2 {
@@ -71,10 +72,9 @@ h1, h2 {
     width: 30px;
 }
 
-/*To push content from behind the navbar & footer*/
+/*To push content from behind the navbar*/
 main {
     margin-top: 56px;
-    margin-bottom: 57px;
 }
 
 /*Title Banner*/
@@ -118,9 +118,8 @@ main {
 /*Tarot Game Page*/
 #tarot-main {
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: var(--accent-sand);
-    padding-top: 10px;
 }
 
 #game-container h2 {
@@ -130,6 +129,7 @@ main {
 
 #game-container > p {
     font-size: 0.8rem;
+    margin-bottom: 0;
 }
 
 #left-card-back, #left-game-card,
