@@ -127,11 +127,6 @@ main {
     text-transform: capitalize;
 }
 
-#game-container > p {
-    font-size: 0.8rem;
-    margin-bottom: 0;
-}
-
 #left-card-back, #left-game-card,
 #middle-card-back, #middle-game-card, 
 #right-card-back, #right-game-card {
@@ -207,6 +202,27 @@ main {
 
 .slide-right {
     transform: translateX(-200vw);
+}
+
+/*To fade game text in on card flip*/
+.fade-in {
+    opacity: 1;
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}    
+}
+
+.fade-out {
+    opacity: 0;
+    animation: fadeOut 1s ease-out;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1};
+    to {opacity: 0;}
 }
 
 /*Footer*/
