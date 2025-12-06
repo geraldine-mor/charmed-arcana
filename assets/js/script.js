@@ -210,7 +210,7 @@ function tarotMobile() {
  * Generate a random card index
  */
 function randomNumber() {
-    i = Math.floor(Math.random() * 6);
+    i = Math.floor(Math.random() * 22);
     card = cards[i];
 }
 
@@ -219,7 +219,7 @@ function randomNumber() {
  */
 function checkNumber() {
     while (usedCards.includes(card.src)) {
-        i = Math.floor(Math.random() * 6);
+        i = Math.floor(Math.random() * 22);
         card = cards[i];
     }
 }
