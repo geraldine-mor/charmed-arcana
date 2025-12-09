@@ -44,7 +44,7 @@ source: [charmed-arcana amiresponsive](https://ui.dev/amiresponsive?url=https://
 **[Features](#features)** (see below)
 
 **MVP Summary**
-> A responsive, engaging tarot and wellness website that promotes the business services, enables contact/booking through a simple form, grows the the business audience through email signup and social media links and includes a JavaScript tarot reading game.
+> A responsive, engaging tarot and spirituality website that promotes the business services, enables contact/booking through a simple form, grows the the business audience through email signup and social media links and includes a JavaScript tarot reading game.
 
 **Content Requirements**
 - Clear labels and instructions for input and operator buttons.

@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("nav-menu").classList.toggle("hidden");
     });
 
-    runGame()
+    runGame();
+
+
+
 });
 
 /**
@@ -20,15 +23,22 @@ function runGame() {
     //Get the card game button and apply event listener
     let gameBtn = document.getElementById("game-btn");
 
-    if (screen.width < 768) {
+    gameBtn.addEventListener("click", function () {
+        if (screen.width < 768) {
+            tarotMobile();
+        } else {
+            tarotGame();
+        }
 
-        gameBtn.addEventListener("click", tarotMobile);
+    });
 
-    } else {
+    //Get the left and right arrows and apply event listener
+    const arrowLeft = document.getElementById("arrow-left");
+    const arrowRight = document.getElementById("arrow-right");
 
-        gameBtn.addEventListener("click", tarotGame);
+    arrowLeft.addEventListener("click", decreaseCurrentIndex);
+    arrowRight.addEventListener("click", increaseCurrentIndex);
 
-    }
 
     let card;
     let i;
@@ -281,9 +291,8 @@ function runGame() {
         document.getElementById("left-game-card").setAttribute("src", card.src);
         document.getElementById("left-game-card").setAttribute("alt", card.alt);
         document.getElementById("left-card-flip").classList.add("flipped");
-        document.getElementById("past-text").classList.remove("hidden");
+        document.getElementById("past-text").classList.replace("hidden", "fade-in");
         document.getElementById("past-text-content").innerText = card.text;
-        document.getElementById("past-text").classList.add("fade-in");
     }
 
     /**
@@ -293,9 +302,8 @@ function runGame() {
         document.getElementById("middle-game-card").setAttribute("src", card.src);
         document.getElementById("middle-game-card").setAttribute("alt", card.alt);
         document.getElementById("middle-card-flip").classList.add("flipped");
-        document.getElementById("present-text").classList.remove("hidden");
+        document.getElementById("present-text").classList.replace("hidden", "fade-in");
         document.getElementById("present-text-content").innerText = card.text;
-        document.getElementById("present-text").classList.add("fade-in");
     }
 
     /**
@@ -305,9 +313,8 @@ function runGame() {
         document.getElementById("right-game-card").setAttribute("src", card.src);
         document.getElementById("right-game-card").setAttribute("alt", card.alt);
         document.getElementById("right-card-flip").classList.add("flipped");
-        document.getElementById("future-text").classList.remove("hidden");
+        document.getElementById("future-text").classList.replace("hidden", "fade-in");
         document.getElementById("future-text-content").innerText = card.text;
-        document.getElementById("future-text").classList.add("fade-in");
     }
 
     /**
@@ -318,25 +325,24 @@ function runGame() {
         document.getElementById("left-card-flip").classList.remove("flipped");
         document.getElementById("middle-card-flip").classList.remove("flipped");
         document.getElementById("right-card-flip").classList.remove("flipped");
-        document.getElementById("past-text").classList.add("fade-out");
-        document.getElementById("present-text").classList.add("fade-out");
-        document.getElementById("future-text").classList.add("fade-out");
-        document.getElementById("past-text").addEventListener("animationend", hideTextDivs);
-
+        document.getElementById("past-text").classList.replace("fade-in","fade-out");
+        document.getElementById("present-text").classList.replace("fade-in","fade-out");
+        document.getElementById("future-text").classList.replace("fade-in","fade-out");
+        document.getElementById("past-text").addEventListener("animationend", hideTextDivs, { once: true});
         //Remove all stored data from variables
         clicks = 0;
         currentIndex = 0;
         maxRevealedIndex = 0;
         usedCards = [];
+        navigationArrows();
+        slideCards();
+      
     }
 
     function hideTextDivs() {
-        document.getElementById("past-text").classList.remove("fade-out");
-        document.getElementById("present-text").classList.remove("fade-out");
-        document.getElementById("future-text").classList.remove("fade-out");
-        document.getElementById("past-text").classList.add("hidden");
-        document.getElementById("present-text").classList.add("hidden");
-        document.getElementById("future-text").classList.add("hidden");
+        document.getElementById("past-text").classList.replace("fade-out", "hidden");
+        document.getElementById("present-text").classList.replace("fade-out", "hidden");
+        document.getElementById("future-text").classList.replace("fade-out", "hidden");
     }
 
     /**
@@ -354,16 +360,12 @@ function runGame() {
         } else if (currentIndex === 1) {
 
             document.getElementById("slide-strip").classList.add("slide-middle");
-            document.getElementById("slide-strip").classList.remove("slide-right");
             document.getElementById("text-slide").classList.add("slide-middle");
-            document.getElementById("text-slide").classList.remove("slide-right");
 
         } else if (currentIndex === 2) {
 
-            document.getElementById("slide-strip").classList.remove("slide-middle");
-            document.getElementById("slide-strip").classList.add("slide-right");
-            document.getElementById("text-slide").classList.remove("slide-middle");
-            document.getElementById("text-slide").classList.add("slide-right");
+            document.getElementById("slide-strip").classList.replace("slide-middle", "slide-right");
+            document.getElementById("text-slide").classList.replace("slide-middle", "slide-right");
         }
 
         navigationArrows();
@@ -371,13 +373,9 @@ function runGame() {
 
     function navigationArrows() {
 
-        const arrowLeft = document.getElementById("arrow-left");
-        const arrowRight = document.getElementById("arrow-right");
-
         //Left arrow shows only when left scroll is appropriate
         if (currentIndex > 0) {
             arrowLeft.classList.remove("hidden");
-            arrowLeft.addEventListener("click", decreaseCurrentIndex);
         } else {
             arrowLeft.classList.add("hidden");
         }
@@ -385,7 +383,6 @@ function runGame() {
         //Right arrow shows only when right scroll is appropriate
         if (currentIndex < maxRevealedIndex) {
             arrowRight.classList.remove("hidden");
-            arrowRight.addEventListener("click", increaseCurrentIndex);
         } else {
             arrowRight.classList.add("hidden");
         }
