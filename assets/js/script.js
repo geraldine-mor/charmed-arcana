@@ -262,8 +262,7 @@ function runGame() {
 
         } else if (clicks === 5) {
             gameReset();
-            gameBtn.innerText = "Reveal First Card";
-            navigationArrows();
+            gameBtn.innerText = "Reveal First Card";            
         }
     }
     /**
@@ -359,7 +358,9 @@ function runGame() {
 
         } else if (currentIndex === 1) {
 
+            document.getElementById("slide-strip").classList.remove("slide-right");
             document.getElementById("slide-strip").classList.add("slide-middle");
+            document.getElementById("text-slide").classList.remove("slide-right");
             document.getElementById("text-slide").classList.add("slide-middle");
 
         } else if (currentIndex === 2) {
