@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Main game function to store all variables for use in the different game 
- * functions
+ * Main game function to store all variables for use in the different 
+ * game functions
  */
 function runGame() {
     let card;

@@ -164,51 +164,30 @@ Created wtith assistance from chatGPT
 
 ## Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
-
 ### Existing Features
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Operators | The mathematical operators (`+`, `-`, `*`, `/`) are large and colorful to allow users to easily select their preferred method of testing their calculation skills. Each operator is color-coded, and has the text name as well for easy identification. | ![screenshot](documentation/features/operators.png) |
-| Equation | This section visibly displays the current equation to be calculated, dynamically updated to use the specific operator that the user has selected above. The empty `<input>` field allows users to enter valid numerical values to test their math skills. | ![screenshot](documentation/features/equation.png) |
-| Submit Answer | This button allows user to submit their calculation to see if they've successfully answered the current equation. Users can also use the `[ENTER]` key on their keyboard to submit their answers, too. | ![screenshot](documentation/features/submit-answer.png) |
-| Scores | This section tallies the total number of *correct* and *incorrect* answers that the user has calculated. Green to represent *correct*, and red to represent *incorrect*. | ![screenshot](documentation/features/scores.png) |
-| Alerts | Depending on whether or not the user gets the calculation correct or incorrect, alerts are used to provide simple feedback to the user. This showcases if they got it correct, or if they've gotten it incorrect, therefore also showing the correct answer. | ![screenshot](documentation/features/alerts.png) |
-| 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Love Maths* site by using the standard navbar and footer. | ![screenshot](documentation/features/404.png) |
+| Navbar | The navigation links for the website are contained within the navbar as per user expectations. The navbar utilises a dropdown menu activated by a menu button to enable it to collapse on smaller screens | ![screenshot of the navbar expanded](documentation/features/navbar-expand.png) ![screenshot of the navbar collapsed](documentation/features/navbar-collapse.png)|
+| Footer | Social Media links are all stored in the page footer which is placed at the bottom of the page. All links open in a new tab and offer user feedback to show that they are clickable | ![screenshot](documentation/features/footer.png) |
+|  |  | ![screenshot](documentation/features) |
+|  |  | ![screenshot](documentation/features) |
+|  |  | ![screenshot](documentation/features) |
+|  |  | ![screenshot](documentation/features) |
 
 ### Future Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
-
-⚠️ --- END ---⚠️
-
-- **Advanced Calculations**: Add support for more complex mathematical operations, like square roots, powers, logarithms, trigonometry (sin, cos, tan), etc.
-- **Equation History**: Display a running log of previous calculations with the ability to recall or reuse past results.
-- **Multi-Step Equations**: Allow users to input multi-step calculations (e.g., `5 + 3 * 2 - 4`) with proper order of operations.
-- **Graphing Capabilities**: Integrate a graphing feature where users can plot functions or equations visually.
-- **Fraction Support**: Add functionality to handle calculations with fractions, including simplifications and conversions between fractions and decimals.
-- **Unit Conversions**: Introduce a feature to convert between different units of measurement (e.g., meters to feet, Celsius to Fahrenheit).
-- **Equation Solver**: Add the ability to solve algebraic equations for a given variable (e.g., `2x + 5 = 13`).
-- **Memory Functions**: Include memory functions (`M+`, `M-`, `MR`) so users can store, add to, and recall values during their calculations.
-- **Input Validation**: Provide real-time feedback for invalid inputs, such as attempting to divide by zero or using incorrect syntax.
-- **Dark Mode**: Add a dark mode option to enhance user experience and reduce eye strain during extended use.
-- **Customizable Themes**: Allow users to choose different themes, colors, or layouts for personalizing their experience.
-- **Calculation Explanations**: Display step-by-step explanations of how the solution is derived, useful for educational purposes or beginners.
-- **Statistical Functions**: Introduce basic statistical operations such as mean, median, mode, and standard deviation.
-- **Save & Share Calculations**: Allow users to save or share their results via a link or social media, especially for complex equations or useful outputs.
-- **Voice Input**: Add a voice input option for users to dictate their calculations instead of typing.
-- **Educational Quizzes**: Implement math-based quizzes or games to help users improve their arithmetic skills while using the app.
+- **Booking Form**: Allow users to book the services deirectly from the website
+- **Mailing List**: Display a running log of previous calculations with the ability to recall or reuse past results.
+- **Multi-Step Equations**: Allow the site owner to view and export email subscribers.
+- **Bookings Dashboard**: Allow the site owner to manage bookings directly from a backend dashboard.
+- **Meditation Page**: Add a page for medititaions that could allow the user to take part in a simple guided meditation.
+- **Increase Complexity of Tarot Reading**: Increase the card deck from the current 22 cards of the major arcana to the full 76 card deck.
+- **Inverted Cards**: Allow readings to include inverted cards and their meanings.
+- **Memory Function**: Allow users to store previous readings for future perusal.
+- **Online Shop**: Add an e-commerce platform to allow the site owner to directly sell merchandise such as tarot decks, books and brand merchandise.
+- **Horoscopes Section**: Supplement the user experience by allowing the user to receive a horoscope based on their birth date.
+- **Save & Share Calculations**: Allow users to save or share their reading via a link or social media.
 
 ## Tools & Technologies
 
@@ -225,19 +204,12 @@ A few examples are listed below to align with possible ways to improve on the sa
 | [![badge](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) | Front-end CSS framework for modern responsiveness and pre-built components. |
 | [![badge](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) | Creating wireframes. |
 | [![badge](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) | Icons. |
-| [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
+| [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, explain things, user stories and content generation.  |
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
 | [![badge](https://img.shields.io/badge/StackOverflow-grey?logo=stackoverflow&logoColor=F58025)](https://stackoverflow.com) | Troubleshooting and Debugging |
+| [![badge](https://img.shields.io/badge/Adobe_Firefly-gray?color=gray)](https://www.firefly.adobe.com) | Image creation |
+| [![badge](https://img.shields.io/badge/Claude-grey?logo=claude&logoColor=%23D97757&color=gray)](https://claude.ai) | Help debug, troubleshoot, and explain things. |
 
-⚠️ NOTE ⚠️
-
-Want to add more?
-
-- Tutorial: https://shields.io/badges/static-badge
-- Icons/Logos: https://simpleicons.org
-  - FYI: not all logos are available to use
-
-🛑 --- END --- 🛑
 
 ## Agile Development Process
 
@@ -251,7 +223,7 @@ Consider adding screenshots of your Projects Board(s), Issues (open and closed),
 
 [GitHub Projects](https://www.github.com/geraldine-mor/charmed-arcana/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/readme-images/project-board.png)
 
 ### GitHub Issues
 
