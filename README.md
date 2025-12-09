@@ -170,9 +170,9 @@ Created wtith assistance from chatGPT
 | --- | --- | --- |
 | Navbar | The navigation links for the website are contained within the navbar as per user expectations. The navbar utilises a dropdown menu activated by a menu button to enable it to collapse on smaller screens | ![screenshot of the navbar expanded](documentation/features/navbar-expand.png) ![screenshot of the navbar collapsed](documentation/features/navbar-collapse.png)|
 | Footer | Social Media links are all stored in the page footer which is placed at the bottom of the page. All links open in a new tab and offer user feedback to show that they are clickable | ![screenshot](documentation/features/footer.png) |
-|  |  | ![screenshot](documentation/features) |
-|  |  | ![screenshot](documentation/features) |
-|  |  | ![screenshot](documentation/features) |
+| Landing Page  | The landing page displays a clear purpose of the website with engaging images and easy to read text | ![screenshot](documentation/features/landing-page.png) |
+| Tarot Game | The user can play a game to receive a simple 3-card tarot reading. | ![screenshot](documentation/features/tarot-game.png) |
+| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck| ![screenshot](documentation/features/tarot-agme-played.png) |
 |  |  | ![screenshot](documentation/features) |
 
 ### Future Features

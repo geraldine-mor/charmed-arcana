@@ -98,22 +98,13 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Lighthouse Audit
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports. Avoid testing the local version (Gitpod/VSCode/etc.), as this can have knock-on effects for performance. If you don't have "Lighthouse" in your Developer Tools, it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Unless your project is a single-page application (SPA), you should test Lighthouse Audit results for all of your pages, for both *mobile* and *desktop*.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-⚠️ --- END --- ⚠️
-
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
+I tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
-| Game | ![screenshot](documentation/lighthouse/mobile-game.png) | ![screenshot](documentation/lighthouse/desktop-game.png) |
+| Home | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-mobile.png) | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-desktop.png) |
+| Tarot | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-mobile.png) | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-desktop.png) |
+| Services | ![screenshot](documentation/lighthouse/) | ![screenshot](documentation/lighthouse/) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
 
 ## Defensive Programming
@@ -181,15 +172,24 @@ Most of your project's **Features** should already align with the **User Stories
 
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
-| As a user | I would like to input two numbers and select an operator (`+`, `-`, `*`, `/`) | so that I can calculate a result. | ![screenshot](documentation/features/feature01.png) |
-| As a user | I would like the application to show me an error message if I enter empty input (`NaN`) | so that I understand what went wrong. | ![screenshot](documentation/features/feature02.png) |
-| As a user | I would like the calculation to happen instantly after I select an operator | so that I get my result quickly without waiting. | ![screenshot](documentation/features/feature03.png) |
-| As a user | I would like the application to have clear and large buttons for each operator | so that I can easily select the correct one on any device. | ![screenshot](documentation/features/feature04.png) |
-| As a user | I would like the application to have high-contrast colors and accessible fonts | so that I can easily read and interact with it. | ![screenshot](documentation/features/feature05.png) |
-| As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. | ![screenshot](documentation/features/feature06.png) |
-| As a user | I would like the app to show me the correct result if my equation was incorrect | so that I understand how the answer was calculated. | ![screenshot](documentation/features/feature07.png) |
-| As a user | I would like to see how many equations I get correct or incorrect | so I can push myself to improve my math skills. | ![screenshot](documentation/features/feature08.png) |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature09.png) |
+| As a visitor | I want to easily navigate the site | to find all the information I need quickly and easily | ![screenshot of navbar](documentation/features/navbar-expand.png) |
+| As a visitor | I want to view the overall mission and purpose of the site | so that I feel connected to its purpose | ![screenshot of landing page](documentation/features/landing-page.png) |
+| As a visitor | I want to understand what the website offers | so that I know whether is fits my spiritual interests | ![screenshot of about section](documentation/features/about-section.png) |
+| As a potential customer | I want to see information about the services provided | so that I can see if they fit my needs  | ![screenshot](documentation/features) <br>⚠️ --- Services Page --- ⚠️ |
+| As a potential customer | I want to complete an enquiry form | so that I can ask questions about the services | ![screenshot](documentation/features) <br>⚠️ --- Enquiry Form --- ⚠️ |
+| As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. | ![screenshot of game button instruction](documentation/features/button1.png) ![screenshot of game button instruction](documentation/features/button2.png) |
+|As a customer | I want to receive confirmation of booking/enquiry | so that I know my message was sent | ![screenshot](documentation/features) <br>⚠️ --- Form Confirmation  --- ⚠️ |
+| As a potential customer | I want to view pricing clearly | so that I understand the costs before I book | ![screenshot](documentation/features) <br>⚠️ --- Pricing --- ⚠️ |
+| As a visitor | I want to play a simple tarot reading game | so that I can engage with tarot in a fun way | ![screenshot of tarot game](documentation/features/tarot-game.png) |
+| As a visitor | I want the game to give me a brief interpretation of the chosen card | so that I gain insight or reflection | ![screenshot of tarot game with text](documentation/features/tarot-agme-played.png) |
+| As a visitor | I want to sign up for regular emails | so that I can receive updates, readings or wellness tips | ![screenshot](documentation/features) <br>⚠️ --- Email Subscribe --- ⚠️ |
+| As a user | I want confirmation that I signed up successfully | so that I know I'm on the mailing list | ![screenshot](documentation/features) <br>⚠️ --- Success Message--- ⚠️ |
+| As a user | I want to access the tarot reader’s social media accounts directly from the website | so that I can follow for updates and content | ![screenshot of footer](documentation/features/footer.png) |
+| As a user | I want social links to be visible and accessible | so that I can find them quickly and easily | ![screenshot of footer](documentation/features/footer.png) |
+| As a visitor | I want the website to load quickly | so that I have a smooth experience | ![screenshot of performance test](documentation/lighthouse/home-desktop.png) |
+| As a visitor | I want the website to feel calm, magical, and welcoming | so that it aligns with the spiritual theme | ![screenshot of homepage](documentation/features/landing-page.png) |
+| As a potential customer | I want to view the tarot reader's contact information | so that I can contact them for information or bookings | ![screenshot](documentation/features) <br>⚠️ --- Contact Details --- ⚠️ |
+| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features) <br>⚠️ --- 404 page --- ⚠️ |
 
 ## Bugs
 
@@ -238,7 +238,7 @@ Any remaining open issues can be tracked [here](https://www.github.com/geraldine
 | Issue | Screenshot |
 | --- | --- |
 | The project is designed to be responsive from `375px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project’s scope, as taught by Code Institute. | ![screenshot](documentation/issues/poor-responsiveness.png) |
-| When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/issues/section-header.png) |
+
 
 > [!IMPORTANT]  
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.

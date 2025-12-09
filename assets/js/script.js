@@ -358,15 +358,17 @@ function runGame() {
 
         } else if (currentIndex === 1) {
 
-            document.getElementById("slide-strip").classList.remove("slide-right");
-            document.getElementById("slide-strip").classList.add("slide-middle");
             document.getElementById("text-slide").classList.remove("slide-right");
+            document.getElementById("slide-strip").classList.add("slide-middle");
+            document.getElementById("slide-strip").classList.remove("slide-right");
             document.getElementById("text-slide").classList.add("slide-middle");
 
         } else if (currentIndex === 2) {
 
-            document.getElementById("slide-strip").classList.replace("slide-middle", "slide-right");
-            document.getElementById("text-slide").classList.replace("slide-middle", "slide-right");
+            document.getElementById("slide-strip").classList.remove("slide-middle");
+            document.getElementById("slide-strip").classList.add("slide-right");
+            document.getElementById("text-slide").classList.remove("slide-middle");
+            document.getElementById("text-slide").classList.add("slide-right");
         }
 
         navigationArrows();
