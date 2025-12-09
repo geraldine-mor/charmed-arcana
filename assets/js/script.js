@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("nav-menu").classList.toggle("hidden");
     });
 
+    runGame()
+});
+
+/**
+ * Tarot reading game
+ */
+function runGame() {
     //Get the card game button and apply event listener
     let gameBtn = document.getElementById("game-btn");
 
@@ -23,14 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    runGame()
-});
-
-/**
- * Main game function to store all variables for use in the different 
- * game functions
- */
-function runGame() {
     let card;
     let i;
     let clicks = 0;

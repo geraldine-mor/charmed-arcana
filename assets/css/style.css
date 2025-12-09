@@ -127,9 +127,7 @@ main {
     text-transform: capitalize;
 }
 
-#left-card-back, #left-game-card,
-#middle-card-back, #middle-game-card, 
-#right-card-back, #right-game-card {
+.card-image {
     height:335px;
     width: 191.42px;
     border-radius: 10px;
