@@ -45,9 +45,10 @@ I tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Game | ![screenshot](documentation/responsiveness/mobile-game.png) | ![screenshot](documentation/responsiveness/tablet-game.png) | ![screenshot](documentation/responsiveness/desktop-game.png) | Works as expected |
-| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+| Home | ![screenshot of homepage mobile view](documentation/responsiveness/mobile-home.png) | ![screenshot of homepage tablet view](documentation/responsiveness/tablet-home.png) | ![screenshot of homepage desktop view](documentation/responsiveness/desktop-home.png) | Works as expected |
+| Tarot  | ![screenshot of tarot game mobile view](documentation/responsiveness/mobile-tarot.png) | ![screenshot of tarot game tablet view](documentation/responsiveness/tablet-tarot.png) | ![screenshot of tarot game desktop view](documentation/responsiveness/desktop-tarot.png) | Works as expected |
+| Tarot  | ![screenshot of services page mobile view](documentation/responsiveness/mobile-services.png) | ![screenshot of services page tablet view](documentation/responsiveness/tablet-services.png) | ![screenshot of services page desktop view](documentation/responsiveness/desktop-services.png) | Works as expected |
+| 404 | ![screenshot of 404 page mobile view](documentation/responsiveness/mobile-404.png) | ![screenshot of 404 page tablet view](documentation/responsiveness/tablet-404.png) | ![screenshot of 404 page desktop view](documentation/responsiveness/desktop-404.png) | Works as expected |
 
 ## Device Testing
 
