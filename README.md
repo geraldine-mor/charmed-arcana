@@ -172,14 +172,15 @@ Created wtith assistance from chatGPT
 | Footer | Social Media links are all stored in the page footer which is placed at the bottom of the page. All links open in a new tab and offer user feedback to show that they are clickable | ![screenshot](documentation/features/footer.png) |
 | Landing Page  | The landing page displays a clear purpose of the website with engaging images and easy to read text | ![screenshot](documentation/features/landing-page.png) |
 | Tarot Game | The user can play a game to receive a simple 3-card tarot reading. | ![screenshot](documentation/features/tarot-game.png) |
-| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck| ![screenshot](documentation/features/tarot-agme-played.png) |
-|  |  | ![screenshot](documentation/features) |
+| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck | ![screenshot](documentation/features/tarot-agme-played.png) |
+| 404 error page | When the user clicks abroken link or mistypes apage address, a custom error message is displayed to let them know that something has gone wrong and to offer them a way back to the homepage via a button| ![screenshot of 404 page](documentation/features/404.png) |
+| ⚠️ TBC ⚠️ |  | ![screenshot](documentation/features) |
 
 ### Future Features
 
-- **Booking Form**: Allow users to book the services deirectly from the website
-- **Mailing List**: Display a running log of previous calculations with the ability to recall or reuse past results.
-- **Multi-Step Equations**: Allow the site owner to view and export email subscribers.
+- **Booking Form**: Allow users to book the services deirectly from the website (check availability, pay deposit etc).
+- **Bookings Dashboard**: Allow the site owner to view, amend & export booking details in a clean and organised manner.
+- **Mailing List**: Allow the site owner to view and export email subscribers.
 - **Bookings Dashboard**: Allow the site owner to manage bookings directly from a backend dashboard.
 - **Meditation Page**: Add a page for medititaions that could allow the user to take part in a simple guided meditation.
 - **Increase Complexity of Tarot Reading**: Increase the card deck from the current 22 cards of the major arcana to the full 76 card deck.
@@ -187,7 +188,9 @@ Created wtith assistance from chatGPT
 - **Memory Function**: Allow users to store previous readings for future perusal.
 - **Online Shop**: Add an e-commerce platform to allow the site owner to directly sell merchandise such as tarot decks, books and brand merchandise.
 - **Horoscopes Section**: Supplement the user experience by allowing the user to receive a horoscope based on their birth date.
-- **Save & Share Calculations**: Allow users to save or share their reading via a link or social media.
+- **Save & Share Readings**: Allow users to save or share their reading via a link or social media.
+- **Swipe Scroll**: Add swipe feature to mobile game so that users can swipe between cards rather than using the navigation arrows.
+- **Card Library**: Add a library of all the cards in use so that users can see the cards and interpretations of all the cards, not just the ones revealed to them.
 
 ## Tools & Technologies
 
@@ -215,12 +218,6 @@ Created wtith assistance from chatGPT
 
 ### GitHub Projects
 
-⚠️ TIP ⚠️
-
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
-
 [GitHub Projects](https://www.github.com/geraldine-mor/charmed-arcana/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
 ![screenshot](documentation/readme-images/project-board.png)
@@ -242,6 +239,8 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 - **Should Have**: adds significant value, but not vital (*~20% of stories*)
 - **Could Have**: has small impact if left out (*the rest ~20% of stories*)
 - **Won't Have**: not a priority for this iteration - future features
+
+![screenshot of MoSCoW classifications](documentation/readme-images/moscow-project-board.png)
 
 ## Testing
 

@@ -11,7 +11,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-|  | [404.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/404.html) | ![screenshot](documentation/validation/html--404.png) | ⚠️ Notes (if applicable) |
+|  | [404.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/404.html) | ![screenshot of 404.html validation](documentation/code-validation/404.png) | |
 |  | [index.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/index.html) | ![screenshot of index.html validation](documentation/code-validation/home.png) | |
 |  | [services.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/services.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/services.html) | ![screenshot](documentation/validation/html--services.png) | ⚠️ Notes (if applicable) |
 |  | [tarot.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/tarot.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/tarot.html) | ![screenshot of tarot.html validation](documentation/code-validation/tarot.png) | |
@@ -38,29 +38,10 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot](documentation/code-validation/js-warnings.png) | After fixing the missing semicolons, there are atill 15 warnings related to the ES6 syntax in use |
 | assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot](documentation/code-validation/js-eversion-6-warnings.png) | I attempted to correct the warnings by stating eversion: 6 but it had no effect |
 
-
-
 ## Responsiveness
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is to test the following 3 sizes:
-
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of your results, to "prove" that you've actually tested them.
-
-Using the [amiresponsive](http://ami.responsivedesign.is) mockup images (*or similar*) does not meet the requirements. Consider using some of the built-in device sizes from the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well. It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-⚠️ --- END --- ⚠️
-
-I've tested my deployed project to check for responsiveness issues.
+I tested my deployed project to check for responsiveness issues.
+⚠️ TBC ⚠️
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
@@ -68,33 +49,29 @@ I've tested my deployed project to check for responsiveness issues.
 | Game | ![screenshot](documentation/responsiveness/mobile-game.png) | ![screenshot](documentation/responsiveness/tablet-game.png) | ![screenshot](documentation/responsiveness/desktop-game.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
 
+## Device Testing
+
+I tested my deployed site on 3 different devices to check for full responsiveness and real-world testing.
+⚠️ TBC ⚠️
+
+| Page | Mobile | Tablet | Desktop | Notes |
+| --- | --- | --- | --- | --- |
+| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
+| Game | ![screenshot](documentation/responsiveness/mobile-game.png) | ![screenshot](documentation/responsiveness/tablet-game.png) | ![screenshot](documentation/responsiveness/desktop-game.png) | Works as expected |
+| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+
+
 ## Browser Compatibility
 
-⚠️ INSTRUCTIONS ⚠️
+⚠️ TBC ⚠️
 
-Use this space to discuss testing the live/deployed site on various browsers. Consider testing at least 3 different browsers, if available on your system. You DO NOT need to use all of the browsers below, just pick any 3 (minimum).
+I tested my deployed project on multiple browsers to check for compatibility issues.
 
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the browsers you've tested, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time. Some of these are paid services, but some are free. If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-⚠️ --- END --- ⚠️
-
-I've tested my deployed project on multiple browsers to check for compatibility issues.
-
-| Page | Chrome | Firefox | Safari | Notes |
-| --- | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| Game | ![screenshot](documentation/browsers/chrome-game.png) | ![screenshot](documentation/browsers/firefox-game.png) | ![screenshot](documentation/browsers/safari-game.png) | Works as expected |
-| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+| Page | Chrome | Firefox | Safari | Opera | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
+| Game | ![screenshot](documentation/browsers/chrome-game.png) | ![screenshot](documentation/browsers/firefox-game.png) | ![screenshot](documentation/browsers/safari-game.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
+| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -105,7 +82,7 @@ I tested my deployed project using the Lighthouse Audit tool to check for any ma
 | Home | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-mobile.png) | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-desktop.png) |
 | Tarot | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-mobile.png) | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-desktop.png) |
 | Services | ![screenshot](documentation/lighthouse/) | ![screenshot](documentation/lighthouse/) |
-| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+| 404 | ![screenshot of 404 page lighthouse audit](documentation/lighthouse/404-mobile.png) | ![screenshot of 404 page lighthouse audit](documentation/lighthouse/404-desktop.png) |
 
 ## Defensive Programming
 
@@ -118,15 +95,6 @@ All Projects:
 - Users cannot submit an empty form (add the `required` attribute)
 - Users must enter valid field types (ensure the correct input `type=""` is used)
 - Users cannot brute-force a URL to navigate to a restricted pages
-
-Python Projects:
-
-- Users cannot perform CRUD functionality if not authenticated (if login functionality exists)
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers/admins
-
-You'll want to test all functionality on your application, whether it's a standard form, or CRUD functionality, for data manipulation on a database. Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser). You should include any manual tests performed, and the expected results/outcome.
 
 Testing should be replicable (can someone else replicate the same outcome?). Ideally, tests cases should focus on each individual section of every page on the website. Each test case should be specific, objective, and step-wise replicable.
 
@@ -189,7 +157,7 @@ Most of your project's **Features** should already align with the **User Stories
 | As a visitor | I want the website to load quickly | so that I have a smooth experience | ![screenshot of performance test](documentation/lighthouse/home-desktop.png) |
 | As a visitor | I want the website to feel calm, magical, and welcoming | so that it aligns with the spiritual theme | ![screenshot of homepage](documentation/features/landing-page.png) |
 | As a potential customer | I want to view the tarot reader's contact information | so that I can contact them for information or bookings | ![screenshot](documentation/features) <br>⚠️ --- Contact Details --- ⚠️ |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features) <br>⚠️ --- 404 page --- ⚠️ |
+| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/404.png) |
 
 ## Bugs
 
