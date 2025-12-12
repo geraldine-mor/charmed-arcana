@@ -430,12 +430,10 @@ function expandCard(cardType){
     let cardBody = document.querySelector(`.card-body[data-card="${cardType}"]`);
     let detailsBtn = document.querySelector(`.details[data-card="${cardType}"]`);
 
-    if (cardType === "tarot") {
-        cardBody.classList.toggle("hidden");
+    cardBody.classList.toggle("hidden");
         if (cardBody.classList.contains("hidden")) {
             detailsBtn.textContent = "More... ⮛"
         } else {
             detailsBtn.textContent = "Less... ⮙";
         }
-    }
 }
