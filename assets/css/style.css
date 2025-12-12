@@ -230,8 +230,6 @@ main {
     background-color: var(--accent-sand);
     color: inherit;
     overflow: hidden;
-    max-width: 95%;
-    margin: auto;
 }
 
 .accent {
