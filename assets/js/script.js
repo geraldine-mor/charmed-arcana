@@ -10,9 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("nav-menu").classList.toggle("hidden");
     });
 
-    runGame();
-
-
+    let gameBtn = document.getElementById("game-btn");
+    if (gameBtn) {
+        runGame();
+    }
+    
+    let detailsButtons = document.getElementsByClassName("details");
+    if (detailsButtons) {
+        for (let detailsButton of detailsButtons) {
+            detailsButton.addEventListener("click", function(){
+                let cardType = this.getAttribute("data-card");
+                expandCard(cardType);
+            })
+        }
+    }
 
 });
 
@@ -408,6 +419,23 @@ function runGame() {
         if (currentIndex < maxRevealedIndex) {
             ++currentIndex;
             slideCards();
+        }
+    }
+}
+
+/**
+ * Expand and collapse details on services cards
+ */
+function expandCard(cardType){
+    let cardBody = document.querySelector(`.card-body[data-card="${cardType}"]`);
+    let detailsBtn = document.querySelector(`.details[data-card="${cardType}"]`);
+
+    if (cardType === "tarot") {
+        cardBody.classList.toggle("hidden");
+        if (cardBody.classList.contains("hidden")) {
+            detailsBtn.textContent = "More... ⮛"
+        } else {
+            detailsBtn.textContent = "Less... ⮙";
         }
     }
 }
