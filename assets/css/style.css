@@ -223,6 +223,39 @@ main {
     to {opacity: 0;}
 }
 
+/*Services Page*/
+.card {
+    padding: 0;
+    border-radius: 5px;
+    background-color: var(--accent-sand);
+    color: inherit;
+    overflow: hidden;
+    max-width: 95%;
+    margin: auto;
+}
+
+.accent {
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.card-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-footer li::before {
+    content: "⮚";
+    color: var(--primary-dark);
+    margin-right: 0.5rem;
+}
+
+.details {
+    margin-bottom: 0;
+    text-align: end;
+    margin-right: 0.5rem;
+}
+
 /*404 Page*/
 #error-main {
     background: url(../images/lost.webp) no-repeat fixed center 80% / cover;
@@ -339,6 +372,19 @@ footer a {
     margin: auto;
 }
 
+.card-btn {
+    display: block;
+    margin: auto;
+    background-color: var(--primary-dark);
+    color: var(--accent-sand);
+    font-weight: 500;
+}
+
+.card-btn:hover {
+    background-color: transparent;
+    border: 3px solid var(--primary-dark);
+    color: var(--primary-dark);
+}
 
 /*Media Queries*/
 
