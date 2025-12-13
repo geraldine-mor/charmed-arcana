@@ -169,10 +169,11 @@ Created wtith assistance from chatGPT
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
 | Navbar | The navigation links for the website are contained within the navbar as per user expectations. The navbar utilises a dropdown menu activated by a menu button to enable it to collapse on smaller screens | ![screenshot of the navbar expanded](documentation/features/navbar-expand.png) ![screenshot of the navbar collapsed](documentation/features/navbar-collapse.png)|
-| Footer | Social Media links are all stored in the page footer which is placed at the bottom of the page. All links open in a new tab and offer user feedback to show that they are clickable | ![screenshot](documentation/features/footer.png) |
-| Landing Page  | The landing page displays a clear purpose of the website with engaging images and easy to read text | ![screenshot](documentation/features/landing-page.png) |
-| Tarot Game | The user can play a game to receive a simple 3-card tarot reading. | ![screenshot](documentation/features/tarot-game.png) |
-| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck | ![screenshot](documentation/features/tarot-agme-played.png) |
+| Footer | Social Media links are all stored in the page footer which is placed at the bottom of the page. All links open in a new tab and offer user feedback to show that they are clickable | ![screenshot of footer](documentation/features/footer.png) |
+| Landing Page  | The landing page displays a clear purpose of the website with engaging images and easy to read text | ![screenshot of landing page](documentation/features/landing-page.png) |
+| Tarot Game | The user can play a game to receive a simple 3-card tarot reading. | ![screenshot of tarot game](documentation/features/tarot-game.png) |
+| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck | ![screenshot of tarot game played](documentation/features/tarot-agme-played.png) |
+| Services Page | The website displays the available services in a well laid out manner with images to reinforce the message | ![screenshot of services page](documentation/features/services.png) |
 | 404 error page | When the user clicks abroken link or mistypes apage address, a custom error message is displayed to let them know that something has gone wrong and to offer them a way back to the homepage via a button| ![screenshot of 404 page](documentation/features/404.png) |
 | ⚠️ TBC ⚠️ |  | ![screenshot](documentation/features) |
 
