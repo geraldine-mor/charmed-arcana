@@ -3,12 +3,14 @@
 
 /*CSS Variables*/
 :root {
-    --primary-dark: #221133; /*Aubergine*/
-    --primary-light: #ddffe0; /*Mint*/
+    --primary-dark: #221133;
+    /*Aubergine*/
+    --primary-light: #ddffe0;
+    /*Mint*/
     --heading: "Cinzel Decorative", serif;
     --body: "Assistant", sans-serif;
     --accent: "Italianno", cursive;
-    --accent-blue: #aac6d7; 
+    --accent-blue: #aac6d7;
     --accent-sand: #cab185;
     --accent-lilac: #beb7df;
 }
@@ -25,7 +27,8 @@ body {
     min-height: 100vh;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-transform: uppercase;
     font-family: var(--heading);
     text-align: center;
@@ -42,15 +45,16 @@ h1, h2 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
 }
 
-.navbar-brand:focus, .navbar-brand:hover {
+.navbar-brand:focus,
+.navbar-brand:hover {
     color: var(--accent-sand);
 }
 
 .navbar a {
-    color: var(--primary-light); 
+    color: var(--primary-light);
     transition: all 0.5s ease-in-out;
 }
 
@@ -79,7 +83,7 @@ main {
 
 /*Title Banner*/
 #title-banner {
-    background: url(../images/title-banner.webp) no-repeat center bottom / cover ;
+    background: url(../images/title-banner.webp) no-repeat center bottom / cover;
     min-height: 193px;
     padding: 0;
 }
@@ -92,7 +96,7 @@ main {
 }
 
 .lead {
-    font-family: var(--accent); 
+    font-family: var(--accent);
 }
 
 #title-btns {
@@ -128,7 +132,7 @@ main {
 }
 
 .card-image {
-    height:335px;
+    height: 335px;
     width: 191.42px;
     border-radius: 10px;
     display: block;
@@ -163,7 +167,8 @@ main {
     transform: rotateY(-180deg);
 }
 
-.card-flip-front, .card-flip-back {
+.card-flip-front,
+.card-flip-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -176,7 +181,8 @@ main {
 }
 
 /*To slide next card in from the right on mobile game*/
-#card-container, #text-container {
+#card-container,
+#text-container {
     overflow: hidden;
     width: 100vw;
     margin: auto;
@@ -188,7 +194,8 @@ main {
     align-items: center;
 }
 
-#slide-strip, #text-slide {
+#slide-strip,
+#text-slide {
     display: flex;
     transition: transform 1s ease;
     width: 300vw;
@@ -209,8 +216,13 @@ main {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}    
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .fade-out {
@@ -219,11 +231,19 @@ main {
 }
 
 @keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 /*Services Page*/
+#services-cards {
+    padding-bottom: 1rem;
+}
 .card {
     padding: 0;
     border-radius: 5px;
@@ -257,14 +277,14 @@ main {
 /*404 Page*/
 #error-main {
     background: url(../images/lost.webp) no-repeat fixed center 80% / cover;
-    width: 100vw;  
+    width: 100vw;
 }
 
 #error-text {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     background-color: rgba(221, 255, 224, .3);
     width: 100vw;
 }
@@ -294,7 +314,7 @@ footer a {
 
 .socials i:hover {
     color: var(--accent-sand);
-    transform: rotateY(180deg);    
+    transform: rotateY(180deg);
 }
 
 /*Buttons*/
@@ -390,12 +410,12 @@ footer a {
 @media screen and (min-width:576px) {
     #title-banner {
         min-height: 220px;
-    } 
-    
+    }
+
     #banner-overlay {
         padding-top: 20px;
     }
-    
+
     #about-image {
         min-height: 500px;
         background-position: center 20%;
@@ -438,29 +458,74 @@ footer a {
         max-height: 860px;
     }
 
-    #card-container, #text-container {
+    #card-container,
+    #text-container {
         width: 100%;
     }
 
-    #slide-strip, #text-slide {
+    #slide-strip,
+    #text-slide {
         width: auto;
     }
 
     .game-text {
         width: 33vw;
     }
-}    
+
+    /*Expand services cards by default when not stacked vertically 
+    and equalise card heights for improved UX*/
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .card img {
+        height: 220px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .card-heading {
+        min-height: 90px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body {
+        flex-grow: 1;
+        display: block; /*Overrides .hidden*/
+        
+    }
+
+    .details {
+        display: none; /*hides now obsolete more button*/
+    }
+    
+    .card-footer {
+        min-height: 143px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-btn {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+}
 
 /*Large screens and above (992px)*/
 @media screen and (min-width:992px) {
-    #about-image, #about2 {
+
+    #about-image,
+    #about2 {
         position: static;
     }
 
     #about2 {
         padding: 0px 12px;
         max-width: fit-content;
-        /*min-height: fit-content;*/
     }
 
     #about div {
@@ -470,7 +535,7 @@ footer a {
 
     #services-btn {
         margin-top: 49px;
-    }   
+    }
 
     #game-container {
         max-width: 90%;
@@ -480,7 +545,7 @@ footer a {
     .game-text {
         width: 30vw;
     }
-}    
+}
 
 /*Extra Large screens and above (1200px)*/
 @media screen and (min-width:1200px) {
