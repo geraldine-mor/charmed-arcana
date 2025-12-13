@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             detailsButton.addEventListener("click", function(){
                 let cardType = this.getAttribute("data-card");
                 expandCard(cardType);
-            })
+            });
         }
     }
 
@@ -432,7 +432,7 @@ function expandCard(cardType){
 
     cardBody.classList.toggle("hidden");
         if (cardBody.classList.contains("hidden")) {
-            detailsBtn.textContent = "More... ⮛"
+            detailsBtn.textContent = "More... ⮛";
         } else {
             detailsBtn.textContent = "Less... ⮙";
         }

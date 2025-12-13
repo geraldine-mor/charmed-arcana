@@ -13,7 +13,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | --- | --- | --- | --- | --- |
 |  | [404.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/404.html) | ![screenshot of 404.html validation](documentation/code-validation/404.png) | |
 |  | [index.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/index.html) | ![screenshot of index.html validation](documentation/code-validation/home.png) | |
-|  | [services.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/services.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/services.html) | ![screenshot](documentation/validation/html--services.png) | ⚠️ Notes (if applicable) |
+|  | [services.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/services.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/services.html) | ![screenshot of services.html with warnings](documentation/code-validation/services-validation-warnings.png) ![screenshot of services.html validation](documentation/code-validation/services.png) | First check revealed warnings regarding unfinished sections - tese were removed as I decided to create a separate page for them. Page passed on 2nd check. |
 |  | [tarot.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/tarot.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/tarot.html) | ![screenshot of tarot.html validation](documentation/code-validation/tarot.png) | |
 
 
@@ -23,7 +23,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [style.css](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/css/style.css) |  | ![screenshot of css validator errors](documentation/code-validation/css-errors.png) | Checked at the end of the tarot page build, sytax errors found |
+| assets | [style.css](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/css/style.css) |  | ![screenshot of css validator errors](documentation/code-validation/css-errors.png) | When checked at the end of the tarot page build, sytax errors found |
 | assets | [style.css](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://geraldine-mor.github.io/charmed-arcana) | ![screenshot of css validator no errors](documentation/code-validation/css-no-errors.png) | Keyframes syntax errors corrected |
 | assets | [style.css](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://geraldine-mor.github.io/charmed-arcana) | ![screenshot of css validator warnings](documentation/code-validation/bootstrap-warnings.png) | There were many warnings related to the Bootstrap library, this is beyond my control and is acceptable |
 
@@ -34,9 +34,10 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot](documentation/code-validation/js-semicolon-errors.png) | Code check run at the end of tarot game build showed 7 missed semicolons |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot](documentation/code-validation/js-warnings.png) | After fixing the missing semicolons, there are atill 15 warnings related to the ES6 syntax in use |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot](documentation/code-validation/js-eversion-6-warnings.png) | I attempted to correct the warnings by stating eversion: 6 but it had no effect |
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-semicolon-errors.png) | Code check run at the end of tarot game build showed 7 missed semicolons |
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-warnings.png) | After fixing the missing semicolons, there are atill 15 warnings related to the ES6 syntax in use |
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-eversion-6-warnings.png) | I attempted to correct the warnings by stating eversion: 6 but it had no effect |
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-warnings-services.png) | When I checked it again at the end of the services page build, there were 25 warnings relating to ES5 sytnax and a warning about functions but this is as taught in the code institute Love Maths run through |
 
 ## Responsiveness
 
@@ -47,7 +48,7 @@ I tested my deployed project to check for responsiveness issues.
 | --- | --- | --- | --- | --- |
 | Home | ![screenshot of homepage mobile view](documentation/responsiveness/mobile-home.png) | ![screenshot of homepage tablet view](documentation/responsiveness/tablet-home.png) | ![screenshot of homepage desktop view](documentation/responsiveness/desktop-home.png) | Works as expected |
 | Tarot  | ![screenshot of tarot game mobile view](documentation/responsiveness/mobile-tarot.png) | ![screenshot of tarot game tablet view](documentation/responsiveness/tablet-tarot.png) | ![screenshot of tarot game desktop view](documentation/responsiveness/desktop-tarot.png) | Works as expected |
-| Tarot  | ![screenshot of services page mobile view](documentation/responsiveness/mobile-services.png) | ![screenshot of services page tablet view](documentation/responsiveness/tablet-services.png) | ![screenshot of services page desktop view](documentation/responsiveness/desktop-services.png) | Works as expected |
+| Services | ![screenshot of services page mobile view](documentation/responsiveness/mobile-services.png) | ![screenshot of services page tablet view](documentation/responsiveness/tablet-services.png) | ![screenshot of services page desktop view](documentation/responsiveness/desktop-services.png) | Works as expected |
 | 404 | ![screenshot of 404 page mobile view](documentation/responsiveness/mobile-404.png) | ![screenshot of 404 page tablet view](documentation/responsiveness/tablet-404.png) | ![screenshot of 404 page desktop view](documentation/responsiveness/desktop-404.png) | Works as expected |
 
 ## Device Testing
@@ -82,7 +83,7 @@ I tested my deployed project using the Lighthouse Audit tool to check for any ma
 | --- | --- | --- |
 | Home | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-mobile.png) | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-desktop.png) |
 | Tarot | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-mobile.png) | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-desktop.png) |
-| Services | ![screenshot](documentation/lighthouse/) | ![screenshot](documentation/lighthouse/) |
+| Services | ![screenshot of services page lighthouse audit](documentation/lighthouse/services-mobile.png) | ![screenshot of services page lighthouse audit](documentation/lighthouse/services-desktop.png) |
 | 404 | ![screenshot of 404 page lighthouse audit](documentation/lighthouse/404-mobile.png) | ![screenshot of 404 page lighthouse audit](documentation/lighthouse/404-desktop.png) |
 
 ## Defensive Programming
@@ -144,11 +145,11 @@ Most of your project's **Features** should already align with the **User Stories
 | As a visitor | I want to easily navigate the site | to find all the information I need quickly and easily | ![screenshot of navbar](documentation/features/navbar-expand.png) |
 | As a visitor | I want to view the overall mission and purpose of the site | so that I feel connected to its purpose | ![screenshot of landing page](documentation/features/landing-page.png) |
 | As a visitor | I want to understand what the website offers | so that I know whether is fits my spiritual interests | ![screenshot of about section](documentation/features/about-section.png) |
-| As a potential customer | I want to see information about the services provided | so that I can see if they fit my needs  | ![screenshot](documentation/features) <br>⚠️ --- Services Page --- ⚠️ |
+| As a potential customer | I want to see information about the services provided | so that I can see if they fit my needs  | ![screenshot](documentation/features/services.png) |
 | As a potential customer | I want to complete an enquiry form | so that I can ask questions about the services | ![screenshot](documentation/features) <br>⚠️ --- Enquiry Form --- ⚠️ |
 | As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. | ![screenshot of game button instruction](documentation/features/button1.png) ![screenshot of game button instruction](documentation/features/button2.png) |
 |As a customer | I want to receive confirmation of booking/enquiry | so that I know my message was sent | ![screenshot](documentation/features) <br>⚠️ --- Form Confirmation  --- ⚠️ |
-| As a potential customer | I want to view pricing clearly | so that I understand the costs before I book | ![screenshot](documentation/features) <br>⚠️ --- Pricing --- ⚠️ |
+| As a potential customer | I want to view pricing clearly | so that I understand the costs before I book | ![screenshot](documentation/features/pricing.png) |
 | As a visitor | I want to play a simple tarot reading game | so that I can engage with tarot in a fun way | ![screenshot of tarot game](documentation/features/tarot-game.png) |
 | As a visitor | I want the game to give me a brief interpretation of the chosen card | so that I gain insight or reflection | ![screenshot of tarot game with text](documentation/features/tarot-agme-played.png) |
 | As a visitor | I want to sign up for regular emails | so that I can receive updates, readings or wellness tips | ![screenshot](documentation/features) <br>⚠️ --- Email Subscribe --- ⚠️ |
