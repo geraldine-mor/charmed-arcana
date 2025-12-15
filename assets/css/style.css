@@ -317,6 +317,16 @@ footer a {
     transform: rotateY(180deg);
 }
 
+#contact h3 {
+    font-family: var(--accent);
+    font-size: 2.5rem;
+}
+
+#contact table * {
+    color: var(--primary-light);
+    background-color: transparent;
+}
+
 /*Buttons*/
 #menu-btn {
     border: none;
