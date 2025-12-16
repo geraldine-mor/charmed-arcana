@@ -283,7 +283,7 @@ main {
 }
 
 #form {
-    background-color: rgba(221, 255, 224, .5);
+    background-color: rgba(170, 198, 215, .7);
     flex-grow: 1;
     padding-top: 2.5rem;
     padding-bottom: 1.5rem;
@@ -293,6 +293,15 @@ main {
 .form-label {
     margin-bottom: 0;
     margin-top: 0.5rem;
+}
+
+#booking {
+    padding: 0;
+}
+
+#booking p {
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 /*404 Page*/
@@ -433,6 +442,12 @@ footer a {
     background-color: transparent;
     border: 3px solid var(--primary-dark);
     color: var(--primary-dark);
+}
+
+#msg-btn {
+    display: block;
+    margin: auto;
+    max-width: fit-content;
 }
 
 /*Media Queries*/

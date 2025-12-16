@@ -47,7 +47,7 @@
         </header>
 
         <main id="enquiry" class="flex-fill">
-            <div id="form" class="container py-auto">
+            <div id="form" class="container">
                 <h1>Get in Touch</h1>
                 <form method="GET" action="#" class="row">
                     <div class="col-md-6">
@@ -69,6 +69,39 @@
                             <option value="booking">Booking Enquiry</option>
                             <option value="general">General Enquiry</option>
                         </select>
+                    </div>
+                    <div id="general" class="hidden">
+                        <div class="col-md-8 mx-auto">
+                            <label for="general-msg" class="form-label">Message</label>
+                            <textarea id="general-msg" class="form-control" placeholder="Write your message here"></textarea>
+                        </div>
+                    </div>
+                    <div id="booking" class="row mx-auto hidden">
+                        <div class="col-md-6">
+                            <label for="service" class="form-label">Desired Service</label>
+                            <select id="service" class="form-select" name="service" required>
+                                <option value="" selected>Please Select</option>
+                                <option value="tarot">Tarot Reading</option>
+                                <option value="meditation">Guided Meditation</option>
+                                <option value="cleanse">Spritiual Home Cleanse</option>
+                                <option value="aura">Aura Balance</option>
+                                <option value="healing">Crystal Healing</option>
+                                <option value="ritual">Intention Setting Ritual</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="date" class="form-label">Requested Date</label>
+                            <input id="date" class="form-control" type="date" name="date" required>
+                        </div>
+                        <div class="col mt-3">
+                            <button id="msg-btn" class="btn about-btn">Add a message</button>
+                        </div>
+                        <div id="booking-msg" class="hidden">
+                            <div class="col-md-8 mx-auto">
+                                <label for="bkg-msg" class="form-label">Message</label>
+                                <textarea id="bkg-msg" class="form-control" placeholder="Write your message here"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
