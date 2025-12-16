@@ -381,6 +381,10 @@ footer a {
     background-color: transparent;
 }
 
+#contact-button {
+    min-width: 202.59px 
+}
+
 .about-btn {
     background-color: var(--primary-dark);
     color: var(--primary-light);
