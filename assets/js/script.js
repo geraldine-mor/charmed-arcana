@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("nav-menu").classList.toggle("hidden");
     });
 
+    //Check if the game page is loaded and run game
     let gameBtn = document.getElementById("game-btn");
     if (gameBtn) {
         runGame();
     };
 
+    //Aplly event listener to services page cards
     let detailsButtons = document.getElementsByClassName("details");
     if (detailsButtons) {
         for (let detailsButton of detailsButtons) {
@@ -25,16 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     };
 
+    //Apply event listener to the enquiry type select input 
     let enquiryType = document.getElementById("enquiry-type");
     enquiryType.addEventListener("change", function () {
         let formChoice = this.value;
         expandForm(formChoice);
     });
 
+    //Apply event listener to add message button
     let msgBtn = document.getElementById("msg-btn");
     if (msgBtn) {
         showBookingMessage();
     };
+
+    //To prevent past dates being selected
+    document.getElementById("date").setAttribute("min", new Date().toISOString().split("T")[0]); //How to get today's date provided by chatGPT
 
 });
 
