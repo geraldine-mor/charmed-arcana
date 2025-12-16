@@ -437,8 +437,9 @@ footer a {
 .card-btn {
     display: block;
     margin: auto;
+    max-width: 200px;
     background-color: var(--primary-dark);
-    color: var(--accent-sand);
+    color: var(--primary-light);
     font-weight: 500;
 }
 
@@ -553,7 +554,7 @@ footer a {
     }
     
     .card-footer {
-        min-height: 143px;
+        min-height: 104px;
         display: flex;
         flex-direction: column;
     }
