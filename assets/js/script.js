@@ -13,17 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameBtn = document.getElementById("game-btn");
     if (gameBtn) {
         runGame();
-    }
-    
+    };
+
     let detailsButtons = document.getElementsByClassName("details");
     if (detailsButtons) {
         for (let detailsButton of detailsButtons) {
-            detailsButton.addEventListener("click", function(){
+            detailsButton.addEventListener("click", function () {
                 let cardType = this.getAttribute("data-card");
                 expandCard(cardType);
             });
-        }
-    }
+        };
+    };
+
+    let enquiryType = document.getElementById("enquiry-type");
+    enquiryType.addEventListener("change", function () {
+        let formChoice = this.value;
+        expandForm(formChoice);
+    });
+
+    let msgBtn = document.getElementById("msg-btn");
+    if (msgBtn) {
+        showBookingMessage();
+    };
 
 });
 
@@ -273,7 +284,7 @@ function runGame() {
 
         } else if (clicks === 5) {
             gameReset();
-            gameBtn.innerText = "Reveal First Card";            
+            gameBtn.innerText = "Reveal First Card";
         }
     }
     /**
@@ -335,10 +346,10 @@ function runGame() {
         document.getElementById("left-card-flip").classList.remove("flipped");
         document.getElementById("middle-card-flip").classList.remove("flipped");
         document.getElementById("right-card-flip").classList.remove("flipped");
-        document.getElementById("past-text").classList.replace("fade-in","fade-out");
-        document.getElementById("present-text").classList.replace("fade-in","fade-out");
-        document.getElementById("future-text").classList.replace("fade-in","fade-out");
-        document.getElementById("past-text").addEventListener("animationend", hideTextDivs, { once: true});
+        document.getElementById("past-text").classList.replace("fade-in", "fade-out");
+        document.getElementById("present-text").classList.replace("fade-in", "fade-out");
+        document.getElementById("future-text").classList.replace("fade-in", "fade-out");
+        document.getElementById("past-text").addEventListener("animationend", hideTextDivs, { once: true });
         //Remove all stored data from variables
         clicks = 0;
         currentIndex = 0;
@@ -346,7 +357,7 @@ function runGame() {
         usedCards = [];
         navigationArrows();
         slideCards();
-      
+
     }
 
     function hideTextDivs() {
@@ -421,19 +432,90 @@ function runGame() {
             slideCards();
         }
     }
-}
+};
 
 /**
  * Expand and collapse details on services cards
  */
-function expandCard(cardType){
+function expandCard(cardType) {
     let cardBody = document.querySelector(`.card-body[data-card="${cardType}"]`);
     let detailsBtn = document.querySelector(`.details[data-card="${cardType}"]`);
 
     cardBody.classList.toggle("hidden");
-        if (cardBody.classList.contains("hidden")) {
-            detailsBtn.textContent = "More... ⮛";
+    if (cardBody.classList.contains("hidden")) {
+        detailsBtn.textContent = "More... ⮛";
+    } else {
+        detailsBtn.textContent = "Less... ⮙";
+    }
+};
+
+/**
+ * Expand form choices based on enquiry type selection
+ */
+function expandForm(formChoice) {
+
+    const general = document.getElementById("general");
+    const booking = document.getElementById("booking");
+    
+
+    let generalMsg = document.getElementById("general-msg");
+    let service = document.getElementById("service");
+    let dateSelect = document.getElementById("date");
+    
+    
+
+    booking.classList.add("hidden");
+    general.classList.add("hidden");
+
+    if (formChoice === "general") {
+        clearFields(formChoice);
+        general.classList.replace("hidden", "fade-in");
+        generalMsg.required = true;
+    } else if (formChoice === "booking") {
+        clearFields(formChoice);
+        booking.classList.replace("hidden", "fade-in");
+        service.required = true;
+        dateSelect.required = true;
+    };
+};
+
+function clearFields(formChoice) {
+    let generalMsg = document.getElementById("general-msg");
+    let service = document.getElementById("service");
+    let dateSelect = document.getElementById("date");
+    let bookingMsg = document.getElementById("bkg-msg");
+
+    if (formChoice === "general") {
+        service.value = "";
+        service.required = false;
+        dateSelect.value = "";
+        dateSelect.required = false;
+        bookingMsg.value = "";
+        bookingMsg.required = false;
+    } else if (formChoice ==="booking") {
+        generalMsg.value = "";
+        generalMsg.required = false;
+    };
+};
+
+function showBookingMessage() {
+    const bookingMsg = document.getElementById("booking-msg");
+    const bkgMsg = document.getElementById("bkg-msg");
+    const msgBtn = document.getElementById("msg-btn");
+
+    msgBtn.addEventListener("click", function() {
+        let isHidden = bookingMsg.classList.contains("hidden");
+
+        if (isHidden) {
+            bookingMsg.classList.replace("hidden", "fade-in");
+            bkgMsg.required = true;
+            msgBtn.textContent = "Remove Message";
         } else {
-            detailsBtn.textContent = "Less... ⮙";
-        }
-}
+            bookingMsg.classList.remove("fade-in");
+            bookingMsg.classList.add("hidden");
+            bkgMsg.value = "";
+            bkgMsg.required = false;
+            msgBtn.textContent = "Add a Message"
+        };
+    });
+};
