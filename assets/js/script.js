@@ -29,10 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Apply event listener to the enquiry type select input 
     let enquiryType = document.getElementById("enquiry-type");
-    enquiryType.addEventListener("change", function () {
-        let formChoice = this.value;
-        expandForm(formChoice);
-    });
+    if (enquiryType) {
+        enquiryType.addEventListener("change", function () {
+            let formChoice = this.value;
+            expandForm(formChoice);
+        });
+    };
 
     //Apply event listener to add message button
     let msgBtn = document.getElementById("msg-btn");
@@ -41,15 +43,44 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     //To prevent past dates being selected
-    document.getElementById("date").setAttribute("min", new Date().toISOString().split("T")[0]); //How to get today's date provided by chatGPT
+    let date = document.getElementById("date");
+    if (date) {
+        date.setAttribute("min", new Date().toISOString().split("T")[0]); //How to get today's date provided by chatGPT
+    }
 
     //Add event listener to submit button 
     let enquiryForm = document.getElementById("enquiry-form");
+    if (enquiryForm) {
 
-    enquiryForm.addEventListener("submit", function(e){
+        enquiryForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("form").classList.add("hidden");
+            document.getElementById("form-success").classList.replace("hidden", "fade-in");
+        });
+    };
+
+    //Add event listeners for email modal
+    const closeOne = document.getElementById("modal-close");
+    const closeTwo = document.getElementById("success-close");
+    const modal = document.getElementById("modal");
+        
+    closeOne.addEventListener("click", closeModal);
+    closeTwo.addEventListener("click", closeModal);
+    
+    document.getElementById("email-modal").addEventListener("click", openModal);
+    document.getElementById("email-close").addEventListener("click", closeModal);
+    window.addEventListener("click", function(e){
+        if (e.target == modal) {
+            closeModal();
+        };
+    });
+    
+    const emailForm = document.getElementById("email-form");
+    
+    emailForm.addEventListener("submit", function (e) {
         e.preventDefault();
-        document.getElementById("form").classList.add("hidden");
-        document.getElementById("form-success").classList.replace("hidden", "fade-in");
+        document.getElementById("modal-content").classList.add("hidden");
+        document.getElementById("modal-success").classList.replace("hidden", "fade-in");
     });
 
 });
@@ -472,13 +503,13 @@ function expandForm(formChoice) {
 
     const general = document.getElementById("general");
     const booking = document.getElementById("booking");
-    
+
 
     let generalMsg = document.getElementById("general-msg");
     let service = document.getElementById("service");
     let dateSelect = document.getElementById("date");
-    
-    
+
+
 
     booking.classList.add("hidden");
     general.classList.add("hidden");
@@ -508,7 +539,7 @@ function clearFields(formChoice) {
         dateSelect.required = false;
         bookingMsg.value = "";
         bookingMsg.required = false;
-    } else if (formChoice ==="booking") {
+    } else if (formChoice === "booking") {
         generalMsg.value = "";
         generalMsg.required = false;
     };
@@ -519,7 +550,7 @@ function showBookingMessage() {
     const bkgMsg = document.getElementById("bkg-msg");
     const msgBtn = document.getElementById("msg-btn");
 
-    msgBtn.addEventListener("click", function() {
+    msgBtn.addEventListener("click", function () {
         let isHidden = bookingMsg.classList.contains("hidden");
 
         if (isHidden) {
@@ -534,4 +565,23 @@ function showBookingMessage() {
             msgBtn.textContent = "Add a Message"
         };
     });
+};
+
+function openModal() {
+    const modal = document.getElementById("modal");
+    
+    modal.classList.replace("hidden", "fade-in");
+};
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    const name = document.getElementById("full-name");
+    const email = document.getElementById("email-address");
+
+    modal.classList.add("hidden");
+    modal.classList.remove("fade-in");
+    name.value = "";
+    email.value = "";
+    document.getElementById("modal-content").classList.remove("hidden");
+    document.getElementById("modal-success").classList.add("hidden");
 };

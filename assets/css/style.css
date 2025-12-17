@@ -406,7 +406,8 @@ footer a {
     height: 100%;
 }
 
-#modal-content {
+#modal-content, 
+#modal-success {
     background-color: var(--primary-dark);
     margin: 40% auto;
     padding: 10px;
@@ -416,7 +417,8 @@ footer a {
     color: var(--accent-sand);
 }
 
-#modal-content p {
+#modal-content p,
+#modal-success p {
     font-size: 1.9rem;
     line-height: 1.9rem;
 }
@@ -432,11 +434,12 @@ footer a {
     color: var(--primary-dark);
 }
 
-#close {
+.close {
    float: right;
 }
 
-#email-send {
+#email-send, 
+#email-close {
     background-color: var(--accent-sand);
     color: var(--primary-dark);
     font-weight: 550;
@@ -707,7 +710,8 @@ footer a {
         margin-top: 24px;
     }
 
-    #modal-content {
+    #modal-content,
+    #modal-success {
         margin: 20% auto;
         width: 80%;
     }

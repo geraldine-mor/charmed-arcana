@@ -54,7 +54,7 @@
                     <h1 id="title" class="display-3">Charmed Arcana</h1>
                     <p class="lead display-4">Explore Tarot, Meditation and Sprirituality</p>
                     <div id="title-btns" class="container-fluid">
-                        <button id="email-modal" class="btn title-btn">Sign up to my newsletter</button>
+                        <button id="email-modal" class="btn title-btn" type="button">Sign up to my newsletter</button>
                         <a id="contact-button" class="btn title-btn" href="contact.html">Contact Me</a>
                     </div>
                 </div>
@@ -88,9 +88,9 @@
             </section>
         </main>
 
-        <div id="modal">
+        <div id="modal" class="hidden">
             <div id="modal-content" class="container">
-                <span id="close"><i class="fa-solid fa-xmark"></i></span>
+                <span id=modal-close class="close"><i class="fa-solid fa-xmark"></i></span>
                 <h2 class="mt-3">Sign up to my newsletter</h2>
                 <p class="lead text-center mt-3">Tarot guidance, meditation moments and spiritual wisdom. Sent with intention to your inbox.</p>
                 <form id="email-form" method="GET" action="#" class="row justify-content-center">
@@ -106,6 +106,15 @@
                         <button id="email-send" class="btn mx-auto mt-3 my-md-4" type="submit">Sign Up</button>
                     </div>
                 </form>
+            </div>
+            <div id="modal-success" class="container hidden">
+                <span id=success-close class="close"><i class="fa-solid fa-xmark"></i></span>
+                <h2 class="mt-3">Thank You</h2>
+                <p class="lead text-center mt-3">You have subscribed to my newsletter</p>
+                
+                <div class="col-12">
+                        <button id="email-close" class="btn mx-auto mt-3 my-md-4" type="button">Back to Homepage</button>
+                </div>
             </div>
         </div>
 
