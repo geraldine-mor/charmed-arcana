@@ -357,6 +357,20 @@ footer a {
     background-color: transparent;
 }
 
+.small {
+    font-size: 11px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.small a {
+    font-size: 11px;
+}
+
+.small a:hover {
+    color: var(--accent-sand);
+}
+
 /*Buttons*/
 #menu-btn {
     border: none;
@@ -493,7 +507,10 @@ footer a {
     .nav-link {
         padding-right: 10px;
     }
-
+    
+    .title-btn {
+        margin: auto 30px;
+    }
     #about-image {
         position: relative;
         top: 20px;
@@ -567,21 +584,37 @@ footer a {
 }
 
 /*Large screens and above (992px)*/
-@media screen and (min-width:992px) {
-
+@media screen and (min-width:992px) {    
+    #about-image {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
     #about-image,
     #about2 {
         position: static;
     }
 
-    #about2 {
-        padding: 0px 12px;
-        max-width: fit-content;
-    }
-
     #about div {
         min-height: 400px;
         margin-bottom: auto;
+    }
+
+    #about1,
+    #about2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about1 .about-btn,
+    #about2 .about-btn {
+        margin-top: auto;
+    }
+
+    .about-btn {
+        min-height: 30px;
+        min-width: 164px;
+        font-size: 1.1rem;
     }
 
     #services-btn {
