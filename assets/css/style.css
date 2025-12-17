@@ -282,7 +282,7 @@ main {
     flex-direction: column;
 }
 
-#form {
+.form-container {
     background-color: rgba(170, 198, 215, .7);
     flex-grow: 1;
     padding-top: 2.5rem;
@@ -316,6 +316,23 @@ main {
 #booking p {
     margin-top: 1rem;
     margin-bottom: 0;
+}
+
+#form-success {
+    position: relative;
+}
+
+#form-success p {
+    font-family: var(--accent);
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+#close {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0;
+    right: 10px;
 }
 
 /*404 Page*/
