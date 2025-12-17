@@ -441,7 +441,7 @@ footer a {
     color: var(--primary-dark);
     font-weight: 550;
     display: block;
-    
+    font-size: 1.1rem;
 }
 
 /*Buttons*/
@@ -705,6 +705,11 @@ footer a {
 
     #form-success a {
         margin-top: 24px;
+    }
+
+    #modal-content {
+        margin: 20% auto;
+        width: 80%;
     }
 }
 
