@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("form-success").classList.replace("hidden", "fade-in");
     });
 
-
 });
 
 /**
