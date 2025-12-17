@@ -660,6 +660,10 @@ footer a {
     .game-text {
         width: 30vw;
     }
+
+    #form-success a {
+        margin-top: 24px;
+    }
 }
 
 /*Extra Large screens and above (1200px)*/

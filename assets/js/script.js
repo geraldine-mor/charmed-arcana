@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         runGame();
     };
 
-    //Aplly event listener to services page cards
+    //Apply event listener to services page cards
     let detailsButtons = document.getElementsByClassName("details");
     if (detailsButtons) {
         for (let detailsButton of detailsButtons) {
@@ -42,6 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //To prevent past dates being selected
     document.getElementById("date").setAttribute("min", new Date().toISOString().split("T")[0]); //How to get today's date provided by chatGPT
+
+    //Add event listener to submit button 
+    let enquiryForm = document.getElementById("enquiry-form");
+
+    enquiryForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        document.getElementById("form").classList.add("hidden");
+        document.getElementById("form-success").classList.replace("hidden", "fade-in");
+    });
+
 
 });
 
