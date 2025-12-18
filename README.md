@@ -11,7 +11,7 @@ Charmed Arcana is a website for a tarot reader/spiritual guide. The primary goal
 
 The evening I submitted my first project ([Rathnure RowFit](https://github.com/geraldine-mor/rathnure-rowfit)), I dreamed about a tarot card game website where the tarot cards would rotate to reveal a card. At that stage I didn't even know if that was something that JavaScript would handle, but as time went on I began to see how it might be done and the decision to pursue it as the main idea for project 2 was made.
 
-![screenshot of various sized mockups of the site](documentation/mockup.png)
+![screenshot of various sized mockups of the site](documentation/readme-images/am-i-responsive.png)
 
 source: [charmed-arcana amiresponsive](https://ui.dev/amiresponsive?url=https://geraldine-mor.github.io/charmed-arcana)
 
@@ -174,8 +174,14 @@ Created wtith assistance from chatGPT
 | Tarot Game | The user can play a game to receive a simple 3-card tarot reading. | ![screenshot of tarot game](documentation/features/tarot-game.png) |
 | Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck | ![screenshot of tarot game played](documentation/features/tarot-agme-played.png) |
 | Services Page | The website displays the available services in a well laid out manner with images to reinforce the message | ![screenshot of services page](documentation/features/services.png) |
+| Pricing | The services page displays pricing and duration of services clearly | ![screenshot of pricing](documentation/features/pricing.png) |
+| Contact Details | The website clearly displays the business' contact details | ![screenshot of contact details](documentation/features/contact-details.png) |
+| Enquiry Form | The website has an easy to use enquiry form that allows the user to contact the site owner directly with general or booking enquiries | ![screenshot of enquiry form](documentation/features/enquiry-form.png) |
+| Form Success Message | The form displays a success message on comletion of the form | ![screenshot of success message](documentation/features/form-success.png) |
+| Newsletter Signup | The website offers the user the opportunity to sign up to the newsletter | ![screenshot o fnewsletter signup](documentation/features/newsletter-modal.png) |
+| Email Signup Success Message | The user receives feedback that they have successfully signed up to the newsletter | ![screenshot of success message](documentation/features/newsletter-success.png) |
 | 404 error page | When the user clicks abroken link or mistypes apage address, a custom error message is displayed to let them know that something has gone wrong and to offer them a way back to the homepage via a button| ![screenshot of 404 page](documentation/features/404.png) |
-| ⚠️ TBC ⚠️ |  | ![screenshot](documentation/features) |
+
 
 ### Future Features
 
@@ -229,8 +235,8 @@ Created wtith assistance from chatGPT
 
 | Link | Screenshot |
 | --- | --- |
-| [![GitHub issues](https://img.shields.io/github/issues-search/geraldine-mor/charmed-arcana?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
-| [![GitHub closed issues](https://img.shields.io/github/issues-search/geraldine-mor/charmed-arcana?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
+| [![GitHub issues](https://img.shields.io/github/issues-search/geraldine-mor/charmed-arcana?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot of open issues](documentation/readme-images/open-issues.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-search/geraldine-mor/charmed-arcana?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot of closed issues](documentation/readme-images/closed-issues.png) |
 
 ### MoSCoW Prioritization
 
@@ -305,88 +311,67 @@ There are no remaining major differences between the local version when compared
 
 ## Credits
 
-⚠️ INSTRUCTIONS ⚠️
-
-In the following sections, you need to reference where you got your content, media, and any extra help. It is common practice to use code from other repositories and tutorials (which is totally acceptable), however, it is important to be very specific about these sources to avoid potential plagiarism.
-
-⚠️ --- END ---⚠️
-
 ### Content
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links for any borrowed code snippets, elements, and resources. Ideally, you should provide an actual link to every resource used, not just a generic link to the main site. If you've used multiple components from the same source (such as Bootstrap), then you only need to list it once, but if it's multiple Codepen samples, then you should list each example individually. If you've used AI for some assistance (such as ChatGPT or Perplexity), be sure to mention that as well. A few examples have been provided below to give you some ideas.
-
-Eventually you'll want to learn how to use Git branches. Here's a helpful tutorial called [Learn Git Branching](https://learngitbranching.js.org) to bookmark for later.
-
-⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
 | [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
-| [Love Maths](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
-| [WebDevSimplified](https://www.youtube.com/watch?v=riDzcEQbX6k) | Inspiration for a quiz app |
-| [WebDevSimplified](https://www.youtube.com/watch?v=1yS-JV4fWqY) | Inspiration for Rock Paper Scissors |
-| [JavaScript30](https://javascript30.com) | Additional JS help |
-| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+| [Coolors](https://coolors.co/221133-ddffe0-cab185-beb7df-aac6d7) | Creation of colour palette (further details provided [above](#colour-scheme)) |
+| [Google Fonts](https://fonts.google.com/specimen/Cinzel+Decorative?preview.text=CHARMED%20ARCANA&query=Cinzel) | Body fonts (further details provided [above](#typography)) |
+| [Stack Overflow](https://stackoverflow.com/questions/46404894/how-do-i-rotate-an-icon-with-css-on-hover) <br> [w3 Schools](https://www.w3schools.com/css/css3_3dtransforms.asp)| Help to create spinning icon effect on hover (footer) |
+| [Colour Code Converter](https://htmlcolorcodes.com/hex-to-rgb/) | Find rgb values of colours to allow for transparent variations |
+| [w3 Schools](https://www.w3schools.com/howto/howto_css_flip_card.asp) | Card flip tutorial for tarot game card reveal  |
+| [w3 Schools](https://www.w3schools.com/w3css/w3css_slideshow.asp) <br> [w3 Schools](https://www.w3schools.com/howto/howto_js_slideshow.asp) <br> [w3 Schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_slideright) <br> [Stack Overflow](https://stackoverflow.com/questions/25044754/css-javascript-slide-div-out-and-slide-div-in) | Slideshow assistance for next card animation on the mobile tarot game |
+| [Stack Overflow](https://stackoverflow.com/questions/11660710/css-transition-fade-in) | Fade in effect |
+| [w3 Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | Modal tutorial for the email signup modal |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations - See [below](#ai-use) |
 
 ### Media
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links to any media files borrowed from elsewhere (images, videos, audio, etc.). If you're the owner (or a close acquaintance) of some/all media files, then make sure to specify this information. Let the assessors know that you have explicit rights to use the media files within your project. Ideally, you should provide an actual link to every media file used, not just a generic link to the main site, unless it's AI-generated artwork.
-
-Looking for some media files? Here are some popular sites to use. The list of examples below is by no means exhaustive.
-
-- Images
-    - [Pexels](https://www.pexels.com)
-    - [Unsplash](https://unsplash.com)
-    - [Pixabay](https://pixabay.com)
-    - [Lorem Picsum](https://picsum.photos) (placeholder images)
-    - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
-    - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-- Audio
-    - [Audio Micro](https://www.audiomicro.com/free-sound-effects)
-    - [Button Clicks](https://www.zapsplat.com/sound-effect-category/button-clicks)
-    - [Lasers & Weapons](https://www.zapsplat.com/sound-effect-category/lasers-and-weapons/page/5)
-    - [Puzzle Music](https://soundimage.org/puzzle-music)
-    - [Camtasia Audio](https://library.techsmith.com/camtasia/assets/Audio)
-- Video
-    - [Videvo](https://www.videvo.net)
-- Image Compression
-    - [TinyPNG](https://tinypng.com) (for images <5MB)
-    - [CompressPNG](https://compresspng.com) (for images >5MB)
-
-A few examples have been provided below to give you some ideas on how to do your own Media credits.
-
-⚠️ --- END ---⚠️
-
 | Source | Notes |
 | --- | --- |
+| [flaticon.com](https://www.flaticon.com/free-icon/crescent-moon_12556544?term=tarot&page=1&position=85&origin=search&related_id=12556544) | Moon and star logo used in header and favicon |
 | [favicon.io](https://favicon.io) | Generating the favicon |
+| [Png Tools](pngtools.com) | Changing the colour of the icon to suit the theme |
 | [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
-| [Pexels](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg) | Hero image |
-| [Wallhere](https://c.wallhere.com/images/9c/c8/da4b4009f070c8e1dfee43d25f99-2318808.jpg!d) | Background wallpaper |
-| [Pixabay](https://cdn.pixabay.com/photo/2017/09/04/16/58/passport-2714675_1280.jpg) | Background wallpaper |
-| [Mixkit](https://mixkit.co/free-sound-effects/game) | Royalty-free sound effects for the game |
-| [DALL-E 3](https://openai.com/index/dall-e-3) | AI generated artwork |
+| [Pexels](https://www.pexels.com/photo/tarot-cards-near-burning-plants-in-close-up-photography-7947733/) | Homepage banner image | 
+| [Pexels](https://www.pexels.com/photo/a-woman-holding-a-deck-of-tarot-cards-11760488/) | Homepage about image |
+ [Adobe Firefly](https://firefly.adobe.com/generate/image) | Tarot deck generated with AI |
+| [Labrythos](https://labyrinthos.co/blogs/tarot-card-meanings-list) | Card design inspiration and text content | 
+| [Pexels](https://www.pexels.com/photo/hands-touching-the-tarot-cards-on-the-table-6014326/) | Tarot reading services card image |
+| [Pexels](https://www.pexels.com/photo/a-person-in-yoga-position-beside-a-woman-lying-on-floor-6998244/) | Guided meditation services card |
+| [Adobe Friefly](https://firefly.adobe.com/generate/image) | Remaining services cards images generated with AI |
+| [Adobe Firefly](https://firefly.adobe.com/generate/image) | Background image of a shop generated with AI |
+| [Boardwalk Games](https://codeinstitute.net/ie/) | Inspiration for the contact details footer |
+| [Pexels](https://www.pexels.com/photo/road-surrounded-by-bare-trees-1632793/) | 404 page background image |
 | [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
-| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
-| [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
+| [ImageResizer](https://imageresizer.com/bulk-resize/download/692d80156e603aac1b970097) | Resizing images and compressing images > 5MB |
+| [Convertio](https://convertio.co/) | Converting images to `.webp` |
+
+### AI Use
+
+This project was my first real exploration into using AI to assist with a website build. 
+
+I primarily used [chatGPT](https://www.chatgpt.com) switching to [Claude](httpd://www.claude.ai) any time I ran out of chats on chatGPT or if I felt like I needed another answer to compare for accuracy of information. I used [Adobe Firefly](https://firefly.adobe.com/generate/image) for all image creation.
+
+In the planning stages, I used AI to help generate the user stories and during the build I frequently used AI to generate text content such as the about sections and services details, image content such as the tarot deck and the services cards. I rarely copied the text exactly but it did help provide ideas and direction.
+
+AI and troubleshooting: I used AI when my own attempts at troubleshooting had failed. Copying and pasting my code in to see where I had gone wrong. AI was not always correct but always pointed me in the right direction. 
+
+I ensured any explanations didn't include code by writing explicitly into the promt that I required explanations only and not code such as the below example:
+
+![screenshot of chatGPT prompt and response](documentation/readme-images/chatgpt-prompt.png)
+
+_The sole exception to this was in figuring out how to block past dates on the date picker and is credited directly in a comment._
+
+I leaned heavily on AI for any areas that I felt would be provided by the client in a real-world build (branding, text & image content) and used it more as an assistant for everything else. Using AI on this project certainly sped up the build process and allowed me to include more of my desired features.
 
 ### Acknowledgements
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution and acknowledgement to any supports that helped, encouraged, or supported you throughout the development stages of this project. It's always lovely to appreciate those that help us grow and improve our developer skills. A few examples have been provided below to give you some ideas.
-
-⚠️ --- END ---⚠️
-
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [Code Institute Discord community](https://discord-portal.codeinstitute.net) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
-- I would like to thank my partner, for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank my Code Institute mentor, Rory Sheridan for his support with this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) without them I wouldn't have the skills to begin this project.
+- I would like to thank the [Code Institute Discord community](https://discord-portal.codeinstitute.net) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
+- I would like to thank my partner Niall, for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my family for picking up the slack during project work allowing me to remain focused.
 
 

@@ -44,26 +44,28 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 ## Responsiveness
 
 I tested my deployed project to check for responsiveness issues.
-⚠️ TBC ⚠️
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
 | Home | ![screenshot of homepage mobile view](documentation/responsiveness/mobile-home.png) | ![screenshot of homepage tablet view](documentation/responsiveness/tablet-home.png) | ![screenshot of homepage desktop view](documentation/responsiveness/desktop-home.png) | Works as expected |
 | Tarot  | ![screenshot of tarot game mobile view](documentation/responsiveness/mobile-tarot.png) | ![screenshot of tarot game tablet view](documentation/responsiveness/tablet-tarot.png) | ![screenshot of tarot game desktop view](documentation/responsiveness/desktop-tarot.png) | Works as expected |
 | Services | ![screenshot of services page mobile view](documentation/responsiveness/mobile-services.png) | ![screenshot of services page tablet view](documentation/responsiveness/tablet-services.png) | ![screenshot of services page desktop view](documentation/responsiveness/desktop-services.png) | Works as expected |
-| Contact | ![screenshot of contact page mobile view](documentation/responsiveness/mobile-services.png) | ![screenshot of contact page tablet view](documentation/responsiveness/tablet-services.png) | ![screenshot of contact page desktop view](documentation/responsiveness/desktop-services.png) | Works as expected |
+| Contact | ![screenshot of contact page mobile view](documentation/responsiveness/mobile-contact.png) | ![screenshot of contact page tablet view](documentation/responsiveness/tablet-contact.png) | ![screenshot of contact page desktop view](documentation/responsiveness/desktop-contact.png) | Works as expected |
 | 404 | ![screenshot of 404 page mobile view](documentation/responsiveness/mobile-404.png) | ![screenshot of 404 page tablet view](documentation/responsiveness/tablet-404.png) | ![screenshot of 404 page desktop view](documentation/responsiveness/desktop-404.png) | Works as expected |
 
 ## Device Testing
 
-I tested my deployed site on 3 different devices to check for full responsiveness and real-world testing.
+I tested my deployed site on 3 different devices to check for full responsiveness and real-world testing. Viewport sizes were taken from [Viewport Sizer](https://viewportsizer.com/).
+
 ⚠️ TBC ⚠️
 
-| Page | Mobile | Tablet | Desktop | Notes |
+| Page | Mobile | Tablet <br> iPad <br> 768x898| Desktop <br> Dell 22" <br> 1665x929| Notes |
 | --- | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Game | ![screenshot](documentation/responsiveness/mobile-game.png) | ![screenshot](documentation/responsiveness/tablet-game.png) | ![screenshot](documentation/responsiveness/desktop-game.png) | Works as expected |
-| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+| Home | ![screenshot of homepage on mobile](documentation/device-testing/) | ![screenshot of homepage on tablet](documentation/device-testing/ipad-home.png) | ![screenshot of homepage on desktop](documentation/device-testing/dell-home.png) | Works as expected |
+| Tarot | ![screenshot of tarot page on mobile](documentation/device-testing/) | ![screenshot of tarot on tablet](documentation/device-testing/ipad-tarot-3.png) | ![screenshot of tarot page on desktop](documentation/device-testing/dell-tarot.png) | Works as expected |
+| Services | ![screenshot of services page on mobile](documentation/device-testing/) | ![screenshot of services page on tablet](documentation/device-testing/ipad-services.png) | ![screenshot of services page on desktop](documentation/device-testing/dell-services.png) | Works as expected |
+| Contact | ![screenshot of contact page on mobile](documentation/device-testing/) | ![screenshot of contact page on tablet](documentation/device-testing/ipad-contact.png) | ![screenshot of contact page on desktop](documentation/device-testing/dell-contact.png) | Works as expected |
+| 404 | ![screenshot of 404 page on mobile](documentation/device-testing/) | ![screenshot of 404 page on tablet](documentation/device-testing/ipad-404.png) | ![screenshot of 404 page on desktop](documentation/device-testing/dell-404.png) | Works as expected |
 
 
 ## Browser Compatibility
@@ -74,9 +76,11 @@ I tested my deployed project on multiple browsers to check for compatibility iss
 
 | Page | Chrome | Firefox | Safari | Opera | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| Game | ![screenshot](documentation/browsers/chrome-game.png) | ![screenshot](documentation/browsers/firefox-game.png) | ![screenshot](documentation/browsers/safari-game.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
+| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/) | Works as expected |
+| Tarot | ![screenshot of tarot page on chrome](documentation/browser-testing/chrome-tarot.png) | ![screenshot of tarot page on firefox](documentation/browser-testing/) | ![screenshot of tarot page on safari](documentation/browser-testing/ipad-tarot.png) | ![screenshot of tarot page on opera](documentation/browser-testing/) | Works as expected |
+| Services | ![screenshot of services page on chrome](documentation/browser-testing/chrome-services.png) | ![screenshot of services page on firefox](documentation/browser-testing/) | ![screenshot of services page on safari](documentation/browser-testing/ipad-services.png) | ![screenshot of services page on opera](documentation/browser-testing/) | There was an issue with how the arrow list icons displayed on Safari ![screenshot of display issue](documentation/browser-testing/services-list-issue.png) |
+| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/) | Works as expected |
+| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -87,6 +91,7 @@ I tested my deployed project using the Lighthouse Audit tool to check for any ma
 | Home | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-mobile.png) | ![screenshot of homepage lighthouse audit](documentation/lighthouse/home-desktop.png) |
 | Tarot | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-mobile.png) | ![screenshot of tarot page lighthouse audit](documentation/lighthouse/tarot-desktop.png) |
 | Services | ![screenshot of services page lighthouse audit](documentation/lighthouse/services-mobile.png) | ![screenshot of services page lighthouse audit](documentation/lighthouse/services-desktop.png) |
+| Contact | ![screenshot of contact page lighthouse audit](documentation/lighthouse/contact-mobile.png) | ![screenshot of contact page lighthouse audit](documentation/lighthouse/contact-desktop.png) |
 | 404 | ![screenshot of 404 page lighthouse audit](documentation/lighthouse/404-mobile.png) | ![screenshot of 404 page lighthouse audit](documentation/lighthouse/404-desktop.png) |
 
 ## Defensive Programming
