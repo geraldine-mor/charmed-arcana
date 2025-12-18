@@ -212,7 +212,7 @@ main {
 /*To fade game text in on card flip*/
 .fade-in {
     opacity: 1;
-    animation: fadeIn 1.5s ease-in;
+    animation: fadeIn 1s ease-in;
 }
 
 @keyframes fadeIn {

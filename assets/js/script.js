@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameBtn = document.getElementById("game-btn");
     if (gameBtn) {
         runGame();
-    };
+    }
 
     //Apply event listener to services page cards
     let detailsButtons = document.getElementsByClassName("details");
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 let cardType = this.getAttribute("data-card");
                 expandCard(cardType);
             });
-        };
-    };
+        }
+    }
 
     //Apply event listener to the enquiry type select input 
     let enquiryType = document.getElementById("enquiry-type");
@@ -34,18 +34,22 @@ document.addEventListener("DOMContentLoaded", function () {
             let formChoice = this.value;
             expandForm(formChoice);
         });
-    };
+    }
 
     //Apply event listener to add message button
     let msgBtn = document.getElementById("msg-btn");
     if (msgBtn) {
         showBookingMessage();
-    };
+    }
 
-    //To prevent past dates being selected
+    //To prevent past dates being selected - this code solution provided by chatGPT
     let date = document.getElementById("date");
     if (date) {
-        date.setAttribute("min", new Date().toISOString().split("T")[0]); //How to get today's date provided by chatGPT
+        let today = new Date(); 
+        today.setDate(today.getDate() + 1);
+
+        let minDate =today.toISOString().split("T")[0];
+        date.setAttribute("min", minDate);
     }
 
     //Add event listener to submit button 
@@ -57,31 +61,37 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("form").classList.add("hidden");
             document.getElementById("form-success").classList.replace("hidden", "fade-in");
         });
-    };
+    }
 
     //Add event listeners for email modal
     const closeOne = document.getElementById("modal-close");
     const closeTwo = document.getElementById("success-close");
     const modal = document.getElementById("modal");
-        
-    closeOne.addEventListener("click", closeModal);
-    closeTwo.addEventListener("click", closeModal);
-    
-    document.getElementById("email-modal").addEventListener("click", openModal);
-    document.getElementById("email-close").addEventListener("click", closeModal);
-    window.addEventListener("click", function(e){
-        if (e.target == modal) {
-            closeModal();
-        };
-    });
-    
+    if (closeOne || closeTwo) {
+
+        closeOne.addEventListener("click", closeModal);
+        closeTwo.addEventListener("click", closeModal);
+
+        document.getElementById("email-modal").addEventListener("click", openModal);
+        document.getElementById("email-close").addEventListener("click", closeModal);
+        window.addEventListener("click", function (e) {
+            if (e.target == modal) {
+                closeModal();
+            }
+
+        });
+    }
+
     const emailForm = document.getElementById("email-form");
-    
-    emailForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        document.getElementById("modal-content").classList.add("hidden");
-        document.getElementById("modal-success").classList.replace("hidden", "fade-in");
-    });
+
+    if (emailForm) {
+
+        emailForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("modal-content").classList.add("hidden");
+            document.getElementById("modal-success").classList.replace("hidden", "fade-in");
+        });
+    }
 
 });
 
@@ -479,7 +489,7 @@ function runGame() {
             slideCards();
         }
     }
-};
+}
 
 /**
  * Expand and collapse details on services cards
@@ -494,7 +504,7 @@ function expandCard(cardType) {
     } else {
         detailsBtn.textContent = "Less... ⮙";
     }
-};
+}
 
 /**
  * Expand form choices based on enquiry type selection
@@ -523,8 +533,8 @@ function expandForm(formChoice) {
         booking.classList.replace("hidden", "fade-in");
         service.required = true;
         dateSelect.required = true;
-    };
-};
+    }
+}
 
 function clearFields(formChoice) {
     let generalMsg = document.getElementById("general-msg");
@@ -542,8 +552,8 @@ function clearFields(formChoice) {
     } else if (formChoice === "booking") {
         generalMsg.value = "";
         generalMsg.required = false;
-    };
-};
+    }
+}
 
 function showBookingMessage() {
     const bookingMsg = document.getElementById("booking-msg");
@@ -562,16 +572,16 @@ function showBookingMessage() {
             bookingMsg.classList.add("hidden");
             bkgMsg.value = "";
             bkgMsg.required = false;
-            msgBtn.textContent = "Add a Message"
-        };
+            msgBtn.textContent = "Add a Message";
+        }
     });
-};
+}
 
 function openModal() {
     const modal = document.getElementById("modal");
-    
+
     modal.classList.replace("hidden", "fade-in");
-};
+}
 
 function closeModal() {
     const modal = document.getElementById("modal");
@@ -584,4 +594,4 @@ function closeModal() {
     email.value = "";
     document.getElementById("modal-content").classList.remove("hidden");
     document.getElementById("modal-success").classList.add("hidden");
-};
+}
