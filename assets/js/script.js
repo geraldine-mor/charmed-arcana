@@ -1,4 +1,4 @@
-/* jshint esversion: 11 */;
+/* jshint esversion: 11 */
 
 // Wait for the DOM to finish loading before running functions
 document.addEventListener("DOMContentLoaded", function () {
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //To prevent past dates being selected - this code solution provided by chatGPT
     let date = document.getElementById("date");
     if (date) {
-        let today = new Date(); 
+        let today = new Date();
         today.setDate(today.getDate() + 1);
 
-        let minDate =today.toISOString().split("T")[0];
+        let minDate = today.toISOString().split("T")[0];
         date.setAttribute("min", minDate);
     }
 
@@ -222,9 +222,10 @@ function runGame() {
      */
     function tarotGame() {
 
-        let gameBtn = document.getElementById("game-btn");
-
         if (clicks === 0) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             //First card - any random number
             randomNumber();
 
@@ -234,7 +235,13 @@ function runGame() {
             gameBtn.innerText = "Reveal Second Card";
             clicks++;
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1300);
+
         } else if (clicks === 1) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             //Second card - generate random number
             randomNumber();
 
@@ -246,7 +253,13 @@ function runGame() {
             gameBtn.innerText = "Reveal Third Card";
             clicks++;
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1300);
+
         } else if (clicks === 2) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             //Third card - generate random number
             randomNumber();
 
@@ -257,10 +270,18 @@ function runGame() {
             gameBtn.innerText = "Reset The Cards";
             clicks++;
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1300);
+
         } else if (clicks === 3) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
 
             gameReset();
             gameBtn.innerText = "Reveal First Card";
+
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1300);
 
         }
     }
@@ -269,10 +290,11 @@ function runGame() {
      * The game optimised for mobile 
      */
     function tarotMobile() {
-
-        let gameBtn = document.getElementById("game-btn");
-
+        
         if (clicks === 0) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             //First card - any random number
             randomNumber();
 
@@ -282,7 +304,12 @@ function runGame() {
             gameBtn.innerText = "Draw Next Card";
             clicks++;
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1400);
+
         } else if (clicks === 1) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
 
             currentIndex = 1;
             slideCards();
@@ -290,8 +317,14 @@ function runGame() {
             maxRevealedIndex = 1;
             clicks++;
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1100);
+
 
         } else if (clicks === 2) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             //Second card - generate random number
             randomNumber();
 
@@ -306,14 +339,19 @@ function runGame() {
                 slideCards();
 
             } else {
-
+                
                 flipMiddle();
                 gameBtn.innerText = "Draw Next Card";
                 clicks++;
 
             }
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1400);
+
         } else if (clicks === 3) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
 
             currentIndex = 2;
             slideCards();
@@ -321,7 +359,13 @@ function runGame() {
             maxRevealedIndex = 2;
             clicks++;
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1100);
+
         } else if (clicks === 4) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             //Third card - generate random number
             randomNumber();
 
@@ -339,9 +383,18 @@ function runGame() {
                 clicks++;
             }
 
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1400);
+
         } else if (clicks === 5) {
+            //Disable buton to prevent rapid clicks
+            gameBusy();
+
             gameReset();
             gameBtn.innerText = "Reveal First Card";
+
+            //Reactivate game button to continue
+            window.setTimeout(gameActive, 1400);
         }
     }
     /**
@@ -489,7 +542,25 @@ function runGame() {
             slideCards();
         }
     }
+
+    /**
+    * Disable game button 
+    */
+    function gameBusy() {
+        gameBtn.disabled = true;
+        gameBtn.classList.add("disabled");
+    }
+
+    /**
+     * Reactivate game button 
+     */
+    function gameActive() {
+        gameBtn.disabled = false;
+        gameBtn.classList.remove("disabled");
+    }
 }
+
+
 
 /**
  * Expand and collapse details on services cards

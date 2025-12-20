@@ -35,11 +35,8 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-semicolon-errors.png) | Code check run at the end of tarot game build showed 7 missed semicolons |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-warnings.png) | After fixing the missing semicolons, there are atill 15 warnings related to the ES6 syntax in use |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-eversion-6-warnings.png) | I attempted to correct the warnings by stating eversion: 6 but it had no effect |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-warnings-services.png) | When I checked it again at the end of the services page build, there were 25 warnings relating to ES5 sytnax and a warning about functions but this is as taught in the code institute Love Maths run through |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-final.png) ![screenshot of jshint response](documentation/code-validation/js-final-corrected.png) | The JavaScript file was tested again at the end of the build and showed 79 warnings, 26 of these related to unnecessary or missing semicolons. When these were fixed the total warnings were 53 - all of a type previously discussed |
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-semicolon-errors.png) | Code check run at the end of tarot game build showed 7 missed semicolons and some esversion warnings|
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-validation.png) | When I checked it again at the end of the build, I had resolved the syntax error that was causing the esversion warnings. There was 1 warning regarding functions declared within loops but this is as taught in the code institute Love Maths run through and is acceptable |
 
 ## Responsiveness
 
