@@ -3,10 +3,8 @@
 
 /*CSS Variables*/
 :root {
-    --primary-dark: #221133;
-    /*Aubergine*/
-    --primary-light: #ddffe0;
-    /*Mint*/
+    --primary-dark: #221133; /*Aubergine*/
+    --primary-light: #ddffe0; /*Mint*/
     --heading: "Cinzel Decorative", serif;
     --body: "Assistant", sans-serif;
     --accent: "Italianno", cursive;
@@ -15,7 +13,7 @@
     --accent-lilac: #beb7df;
 }
 
-/*Utility Classes*/
+/*Utility Class*/
 .hidden {
     display: none;
 }
@@ -194,8 +192,7 @@ main {
     align-items: center;
 }
 
-#slide-strip,
-#text-slide {
+.slide-strip {
     display: flex;
     transition: transform 1s ease;
     width: 300vw;
@@ -244,6 +241,7 @@ main {
 #services-cards {
     padding-bottom: 1rem;
 }
+
 .card {
     padding: 0;
     border-radius: 5px;
@@ -607,8 +605,7 @@ footer a {
         width: 100%;
     }
 
-    #slide-strip,
-    #text-slide {
+    .slide-strip {
         width: auto;
     }
 

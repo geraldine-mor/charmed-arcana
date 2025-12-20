@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Charmed Arcana tarot reading game, get a tarot reading">
+        <meta name="description" content="Charmed Arcana tarot reading game, get a fun tarot reading">
         <meta name="keywords"
             content="Charmed Arcana, tarot, tarot cards, tarot reading, tarot reader, wellness, meditation">
 
@@ -25,7 +25,7 @@
 
     </head>
 
-    <body class="d-flex flex-column ">
+    <body class="d-flex flex-column">
         <!--Collapsible navbar-->
         <header>
             <nav class="navbar fixed-top">
@@ -46,12 +46,14 @@
             </nav>
         </header>
 
+        <!--Tarot Game Section-->
         <main id="tarot-main" class="flex-fill py-3">
             <section id="game-container">
                 <h1 class="display-3">Tarot Reading</h1>
-                <div id="game-area">
+                <div>
                     <div id="card-container">
                         <button id="arrow-left" class="arrow-btn hidden">❮</button>
+                        <!--Game Cards-->
                         <div id="slide-strip" class="slide-strip">
                             <div id="left-card-flip" class="card-flip mx-auto">
                                 <div id="left-card-flip-inner" class="card-flip-inner">
@@ -95,6 +97,7 @@
                 </div>
                 <div>
                     <button id="game-btn" class="btn">Reveal First Card</button>
+                    <!--Game Text-->
                     <div id="text-container">
                         <div id="text-slide" class="slide-strip">
                             <div id="past-text" class="hidden">

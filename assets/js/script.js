@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         runGame();
     }
 
-    //Apply event listener to services page cards
+    //Apply event listener to services page cards & check if services page is loaded
     let detailsButtons = document.getElementsByClassName("details");
     if (detailsButtons) {
         for (let detailsButton of detailsButtons) {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    //Apply event listener to the enquiry type select input 
+    //Apply event listener to the enquiry type select input & check if contact page is loaded
     let enquiryType = document.getElementById("enquiry-type");
     if (enquiryType) {
         enquiryType.addEventListener("change", function () {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    //Apply event listener to add message button
+    //Apply event listener to add message button & check if contact page is loaded
     let msgBtn = document.getElementById("msg-btn");
     if (msgBtn) {
         showBookingMessage();
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         date.setAttribute("min", minDate);
     }
 
-    //Add event listener to submit button 
+    //Add event listener to submit button & check if contact page is loaded
     let enquiryForm = document.getElementById("enquiry-form");
     if (enquiryForm) {
 
@@ -63,10 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    //Add event listeners for email modal
+    //Add event listeners for email modal & check if homepage is loaded
     const closeOne = document.getElementById("modal-close");
     const closeTwo = document.getElementById("success-close");
     const modal = document.getElementById("modal");
+
     if (closeOne || closeTwo) {
 
         closeOne.addEventListener("click", closeModal);
@@ -83,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const emailForm = document.getElementById("email-form");
-
     if (emailForm) {
 
         emailForm.addEventListener("submit", function (e) {
@@ -118,7 +118,7 @@ function runGame() {
     arrowLeft.addEventListener("click", decreaseCurrentIndex);
     arrowRight.addEventListener("click", increaseCurrentIndex);
 
-
+    //Game variables
     let card;
     let i;
     let clicks = 0;
@@ -126,6 +126,7 @@ function runGame() {
     let currentIndex = 0;
     let maxRevealedIndex = 0;
 
+    //Tarot card details
     const cards = [
         {
             src: "assets/images/death.webp", alt: "Tarot card depicting death",
@@ -249,6 +250,7 @@ function runGame() {
             checkNumber();
 
             usedCards.push(card.src); //Store used card
+
             flipMiddle();
             gameBtn.innerText = "Reveal Third Card";
             clicks++;
@@ -277,6 +279,7 @@ function runGame() {
             //Disable buton to prevent rapid clicks
             gameBusy();
 
+            //Reset the game
             gameReset();
             gameBtn.innerText = "Reveal First Card";
 
@@ -305,12 +308,13 @@ function runGame() {
             clicks++;
 
             //Reactivate game button to continue
-            window.setTimeout(gameActive, 1400);
+            window.setTimeout(gameActive, 1300);
 
         } else if (clicks === 1) {
             //Disable buton to prevent rapid clicks
             gameBusy();
 
+            //Slide to next card and allow user to go back to view previous card
             currentIndex = 1;
             slideCards();
             gameBtn.innerText = "Reveal Second Card";
@@ -333,6 +337,7 @@ function runGame() {
 
             usedCards.push(card.src); //Store used cards
 
+            //Check current card and slide to correct card in the sequence
             if (currentIndex != 1) {
 
                 currentIndex = 1;
@@ -343,16 +348,16 @@ function runGame() {
                 flipMiddle();
                 gameBtn.innerText = "Draw Next Card";
                 clicks++;
-
             }
 
             //Reactivate game button to continue
-            window.setTimeout(gameActive, 1400);
+            window.setTimeout(gameActive, 1300);
 
         } else if (clicks === 3) {
             //Disable buton to prevent rapid clicks
             gameBusy();
 
+            //Slide to next card and allow user to go back to view previous cards
             currentIndex = 2;
             slideCards();
             gameBtn.innerText = "Reveal Third Card";
@@ -372,6 +377,7 @@ function runGame() {
             //Check number not in use and generate a new one if needed
             checkNumber();
 
+            //Check current card and slide to correct card in the sequence
             if (currentIndex != 2) {
 
                 currentIndex = 2;
@@ -384,7 +390,7 @@ function runGame() {
             }
 
             //Reactivate game button to continue
-            window.setTimeout(gameActive, 1400);
+            window.setTimeout(gameActive, 1300);
 
         } else if (clicks === 5) {
             //Disable buton to prevent rapid clicks
@@ -394,7 +400,7 @@ function runGame() {
             gameBtn.innerText = "Reveal First Card";
 
             //Reactivate game button to continue
-            window.setTimeout(gameActive, 1400);
+            window.setTimeout(gameActive, 1300);
         }
     }
     /**
@@ -470,6 +476,9 @@ function runGame() {
 
     }
 
+    /**
+     * Hide the revealed text divs after the animation has completed
+     */
     function hideTextDivs() {
         document.getElementById("past-text").classList.replace("fade-out", "hidden");
         document.getElementById("present-text").classList.replace("fade-out", "hidden");
@@ -506,6 +515,9 @@ function runGame() {
         navigationArrows();
     }
 
+    /**
+     * Display navigation arrows at the right time during the game
+     */
     function navigationArrows() {
 
         //Left arrow shows only when left scroll is appropriate
@@ -560,8 +572,6 @@ function runGame() {
     }
 }
 
-
-
 /**
  * Expand and collapse details on services cards
  */
@@ -585,12 +595,9 @@ function expandForm(formChoice) {
     const general = document.getElementById("general");
     const booking = document.getElementById("booking");
 
-
     let generalMsg = document.getElementById("general-msg");
     let service = document.getElementById("service");
     let dateSelect = document.getElementById("date");
-
-
 
     booking.classList.add("hidden");
     general.classList.add("hidden");
@@ -607,6 +614,9 @@ function expandForm(formChoice) {
     }
 }
 
+/**
+ * Clear all fields not currently in use & remove required to allow form validation to pass
+ */
 function clearFields(formChoice) {
     let generalMsg = document.getElementById("general-msg");
     let service = document.getElementById("service");
@@ -626,6 +636,9 @@ function clearFields(formChoice) {
     }
 }
 
+/**
+ * Display booking enquiry message box if required
+ */
 function showBookingMessage() {
     const bookingMsg = document.getElementById("booking-msg");
     const bkgMsg = document.getElementById("bkg-msg");
@@ -648,12 +661,18 @@ function showBookingMessage() {
     });
 }
 
+/**
+ * Open email signup modal 
+ */
 function openModal() {
     const modal = document.getElementById("modal");
 
     modal.classList.replace("hidden", "fade-in");
 }
 
+/**
+ * Close email signup modal
+ */
 function closeModal() {
     const modal = document.getElementById("modal");
     const name = document.getElementById("full-name");
