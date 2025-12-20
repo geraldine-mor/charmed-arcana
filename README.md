@@ -172,7 +172,7 @@ Created wtith assistance from chatGPT
 | Footer | Social Media links are all stored in the page footer which is placed at the bottom of the page. All links open in a new tab and offer user feedback to show that they are clickable | ![screenshot of footer](documentation/features/footer.png) |
 | Landing Page  | The landing page displays a clear purpose of the website with engaging images and easy to read text | ![screenshot of landing page](documentation/features/landing-page.png) |
 | Tarot Game | The user can play a game to receive a simple 3-card tarot reading. | ![screenshot of tarot game](documentation/features/tarot-game.png) |
-| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck | ![screenshot of tarot game played](documentation/features/tarot-agme-played.png) |
+| Tarot Game Interactions | When the user clicks the game button, the cards are revealed and corresponding text is displayed. Cards are chosen randomly from a 22 card deck | ![screenshot of tarot game played](documentation/features/tarot-game-played.png) |
 | Services Page | The website displays the available services in a well laid out manner with images to reinforce the message | ![screenshot of services page](documentation/features/services.png) |
 | Pricing | The services page displays pricing and duration of services clearly | ![screenshot of pricing](documentation/features/pricing.png) |
 | Contact Details | The website clearly displays the business' contact details | ![screenshot of contact details](documentation/features/contact-details.png) |
@@ -301,11 +301,7 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 
 ### Local VS Deployment
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site. Generally, there shouldn't be [m]any major differences, so if you honestly cannot find any differences, feel free to use the following example:
-
-⚠️ --- END --- ⚠️
+When testing the project on safari devices there was an issue with a chosen glyph not rendering. This has been explained in detail in the testing file but it did require a style change to ensure that the page displayed equally well across all browsers.
 
 There are no remaining major differences between the local version when compared to the deployed version online.
 
@@ -364,7 +360,7 @@ I ensured any explanations didn't include code by writing explicitly into the pr
 
 _The sole exception to this was in figuring out how to block past dates on the date picker and is credited directly in a comment._
 
-I leaned heavily on AI for any areas that I felt would be provided by the client in a real-world build (branding, text & image content) and used it more as an assistant for everything else. Using AI on this project certainly sped up the build process and allowed me to include more of my desired features.
+I leaned heavily on AI for any areas that I felt would be provided by the client in a real-world build (branding, text & image content) and used it more as a tutor and assistant for everything else. Using AI on this project certainly sped up the build process and allowed me to include more of my desired features.
 
 ### Acknowledgements
 

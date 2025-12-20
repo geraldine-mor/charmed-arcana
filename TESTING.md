@@ -67,17 +67,15 @@ I tested my deployed site on 3 different devices to check for full responsivenes
 
 ## Browser Compatibility
 
-⚠️ TBC ⚠️
-
 I tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Page | Chrome | Firefox | Safari | Opera | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/) | Works as expected |
-| Tarot | ![screenshot of tarot page on chrome](documentation/browser-testing/chrome-tarot.png) | ![screenshot of tarot page on firefox](documentation/browser-testing/) | ![screenshot of tarot page on safari](documentation/browser-testing/ipad-tarot.png) | ![screenshot of tarot page on opera](documentation/browser-testing/) | Works as expected |
-| Services | ![screenshot of services page on chrome](documentation/browser-testing/chrome-services.png) | ![screenshot of services page on firefox](documentation/browser-testing/) | ![screenshot of services page on safari](documentation/browser-testing/ipad-services.png) | ![screenshot of services page on opera](documentation/browser-testing/) | There was an issue with how the arrow list icons displayed on Safari ![screenshot of display issue](documentation/browser-testing/services-list-issue.png) I changed the styles to correct |
-| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/) | Works as expected |
-| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/) | Works as expected |
+| Home | ![screenshot of homepage on chrome](documentation/browser-testing/chrome-home.png) | ![screenshot of homepage on firefox](documentation/browser-testing/firefox-home.png) | ![screenshot of homepage on safari](documentation/browser-testing/ipad-home.png) | ![screenshot of homepage on opera](documentation/browser-testing/opera-home.png) | Works as expected |
+| Tarot | ![screenshot of tarot page on chrome](documentation/browser-testing/chrome-tarot.png) | ![screenshot of tarot page on firefox](documentation/browser-testing/firefox-tarot.png) | ![screenshot of tarot page on safari](documentation/browser-testing/ipad-tarot.png) | ![screenshot of tarot page on opera](documentation/browser-testing/opera-tarot.png) | Works as expected |
+| Services | ![screenshot of services page on chrome](documentation/browser-testing/chrome-services.png) | ![screenshot of services page on firefox](documentation/browser-testing/firefox-services.png) | ![screenshot of services page on safari](documentation/browser-testing/ipad-services.png) | ![screenshot of services page on opera](documentation/browser-testing/opera-services.png) | There was an issue with how the arrow list icons displayed on Safari ![screenshot of display issue](documentation/browser-testing/services-list-issue.png) I changed the styles to correct |
+| Contact | ![screenshot of contact page on chrome](documentation/browser-testing/chrome-contact.png) | ![screenshot of contact page on firefox](documentation/browser-testing/firefox-contact.png) | ![screenshot of contact page on safari](documentation/browser-testing/ipad-contact.png) | ![screenshot of contact page on opera](documentation/browser-testing/opera-contact.png) | Works as expected |
+| 404 | ![screenshot of 404 page on chrome](documentation/browser-testing/chrome-404.png) | ![screenshot of 404 page on firefox](documentation/browser-testing/firefox-404.png) | ![screenshot of 404 page on safari](documentation/browser-testing/ipad-404.png) | ![screenshot of 404 page on opera](documentation/browser-testing/opera-404.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -93,126 +91,67 @@ I tested my deployed project using the Lighthouse Audit tool to check for any ma
 
 ## Defensive Programming
 
-⚠️ INSTRUCTIONS ⚠️
-
-Defensive programming (defensive design) is extremely important! When building projects that accept user inputs or forms, you should always test the level of security for each form field. Examples of this could include (but not limited to):
-
-All Projects:
-
-- Users cannot submit an empty form (add the `required` attribute)
-- Users must enter valid field types (ensure the correct input `type=""` is used)
-- Users cannot brute-force a URL to navigate to a restricted pages
-
-Testing should be replicable (can someone else replicate the same outcome?). Ideally, tests cases should focus on each individual section of every page on the website. Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine, consider documenting tests on each element of the page (eg. button clicks, input box validation, navigation links, etc.) by testing them in their "happy flow", their "bad/exception flow", mentioning the expected and observed results, and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-- Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-⚠️ --- END --- ⚠️
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page/Feature | Expectation | Test | Result | Screenshot |
 | --- | --- | --- | --- | --- |
-| Calculator UI | Feature is expected to allow the user to input two numbers and select an operator (`+`, `-`, `*`, `/`). | Entered two numbers and selected each operator to perform calculations. | Calculations for all operators worked as expected. | ![screenshot](documentation/defensive/input-output.png) |
-| | Feature is expected to show an error message if inputs are empty (`NaN`). | Tried submitting calculations with empty input fields. | Error message displayed as expected. | ![screenshot](documentation/defensive/empty-inputs.png) |
-| | Feature is expected to display buttons that are clear, large, and easy to select on all devices. | Verified button sizes and usability across multiple devices (mobile, tablet, desktop). | Buttons were accessible and easy to use on all tested devices. | ![screenshot](documentation/defensive/responsive.png) |
-| | Feature is expected to use high-contrast colors and accessible fonts. | Checked contrast ratios using accessibility tools (e.g., Lighthouse, Wave). | Colors and fonts met accessibility standards. | ![screenshot](documentation/defensive/accessibility.png) |
-| | Feature is expected to have clear labels and instructions for user guidance. | Reviewed labels and instructions for clarity and ease of use. | Labels and instructions were clear and intuitive. | ![screenshot](documentation/defensive/labels-instructions.png) |
-| Instant Calculation | Feature is expected to calculate and display results instantly after selecting an operator. | Selected operators after entering two numbers. | Results were displayed instantly. | ![screenshot](documentation/defensive/calc-speed.png) |
-| Error Handling | Feature is expected to display correct results even if an equation was input incorrectly. | Entered various incorrect equations and verified the results. | Correct results were displayed for all tested cases. | ![screenshot](documentation/defensive/error-handling.png) |
-| Score Tracker | Feature is expected to track the number of correct and incorrect equations. | Performed multiple calculations (correct and incorrect) and checked the score tracker. | Score tracker updated correctly for all tested scenarios. | ![screenshot](documentation/defensive/score-tracker.png) |
-| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`) to test error handling. | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
+| Navbar Links | Feature is expected to allow the user to navigate easily between pages | Tested all links on each page | Link changed to inform user it's clickable and navigated to correct page | ![screenshot of navbar link hover effect](documentation/defensive-testing/nav-link.png) |
+| Newsletter Signup Button | Feature is expected to allow the user to signup to the newsletter | Clicked the newsletter signup button | Email signup modal appeared as expected | ![screenshot of email signup modal](documentation/defensive-testing/newsletter-signup.png) |
+| Newsletter Modal Form | Feature is expected to require all fields be completed | Attempted to signup without filling in fields or with errors | Form did not send and an alert informed me of the mistake | ![screenshot of email form validation](documentation/defensive-testing/newsletter-name-validation.png) ![screenshot of email form validation](documentation/defensive-testing/newsletter-email-validation.png) ![screenshot of email form validation](documentation/defensive-testing/newsletter-email-type-validation.png) |
+| Navigation Buttons | Feature is expected to allow the user to navigate between pages | Clicked navigation buttons | The correct page opened | ![screenshot of navigation button hover](documentation/defensive-testing/navigation-button-hover.png) |
+| Footer Links | Feature is expected to open links in a new tab | Clicked all links  | All links opened the correct page in a new tab | ![screenshot of new tab opened](documentation/defensive-testing/new-tab.png) |
+| Tarot Game Instructions | Feature is expected to provide clear instruction as to how the game should be played | Clicked through all the stages of the game | Button label changed to provide clear feedback as to the next step | ![screenshot of game button text](documentation/defensive-testing/game-first-card.png) ![screenshot of game button text](documentation/defensive-testing/game-second-card.png) ![screenshot of game button text](documentation/defensive-testing/game-reset.png) |
+| Expand/Collapse Card Button | Feature is expected to hide/show the details section of the card when clicked | Clicked the more/less button | Card expanded and collapsed as expected | ![screenshot of expanded card](documentation/defensive-testing/card-expand.png) |
+| Contact Form | Feature is expected to validate all form fields before sending | Attempted to send the form without required fields | Form validation alerts appeared | ![screenshot of form validation alert](documentation/defensive-testing/contact-validation.png) |
+| Form Confirmation | Feature is expected to inform the user that their enquiry has been sent | Completed the required fields and clicked "send" | Success message was displayed | ![screenshot of contact form success message](documentation/defensive-testing/contact-success.png) |
+| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`) to test error handling. | A custom 404 error page was displayed as expected. | ![screenshot of 404 page](documentation/defensive-testing/404-test.png) |
 
 ## User Story Testing
-
-⚠️ INSTRUCTIONS ⚠️
-
-Testing User Stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **Features** should already align with the **User Stories**, so this should be as simple as creating a table with the User Story, matching with the re-used screenshot from the respective Feature.
-
-⚠️ --- END --- ⚠️
 
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
 | As a visitor | I want to easily navigate the site | to find all the information I need quickly and easily | ![screenshot of navbar](documentation/features/navbar-expand.png) |
 | As a visitor | I want to view the overall mission and purpose of the site | so that I feel connected to its purpose | ![screenshot of landing page](documentation/features/landing-page.png) |
 | As a visitor | I want to understand what the website offers | so that I know whether is fits my spiritual interests | ![screenshot of about section](documentation/features/about-section.png) |
-| As a potential customer | I want to see information about the services provided | so that I can see if they fit my needs  | ![screenshot](documentation/features/services.png) |
-| As a potential customer | I want to complete an enquiry form | so that I can ask questions about the services | ![screenshot](documentation/features) <br>⚠️ --- Enquiry Form --- ⚠️ |
+| As a potential customer | I want to see information about the services provided | so that I can see if they fit my needs  | ![screenshot of services page](documentation/features/services.png) |
+| As a potential customer | I want to complete an enquiry form | so that I can ask questions about the services | ![screenshot of enquiry form](documentation/features/enquiry-form.png) |
 | As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. | ![screenshot of game button instruction](documentation/features/button1.png) ![screenshot of game button instruction](documentation/features/button2.png) |
-|As a customer | I want to receive confirmation of booking/enquiry | so that I know my message was sent | ![screenshot](documentation/features) <br>⚠️ --- Form Confirmation  --- ⚠️ |
-| As a potential customer | I want to view pricing clearly | so that I understand the costs before I book | ![screenshot](documentation/features/pricing.png) |
+|As a customer | I want to receive confirmation of booking/enquiry | so that I know my message was sent | ![screenshot of form success message](documentation/features/form-success.png) |
+| As a potential customer | I want to view pricing clearly | so that I understand the costs before I book | ![screenshot of pricing](documentation/features/pricing.png) |
 | As a visitor | I want to play a simple tarot reading game | so that I can engage with tarot in a fun way | ![screenshot of tarot game](documentation/features/tarot-game.png) |
-| As a visitor | I want the game to give me a brief interpretation of the chosen card | so that I gain insight or reflection | ![screenshot of tarot game with text](documentation/features/tarot-agme-played.png) |
-| As a visitor | I want to sign up for regular emails | so that I can receive updates, readings or wellness tips | ![screenshot](documentation/features) <br>⚠️ --- Email Subscribe --- ⚠️ |
-| As a user | I want confirmation that I signed up successfully | so that I know I'm on the mailing list | ![screenshot](documentation/features) <br>⚠️ --- Success Message--- ⚠️ |
+| As a visitor | I want the game to give me a brief interpretation of the chosen card | so that I gain insight or reflection | ![screenshot of tarot game with text](documentation/features/tarot-game-played.png) |
+| As a visitor | I want to sign up for regular emails | so that I can receive updates, readings or wellness tips | ![screenshot of email signup modal](documentation/features/newsletter-modal.png) |
+| As a user | I want confirmation that I signed up successfully | so that I know I'm on the mailing list | ![screenshot of email signup success message](documentation/features/newsletter-success.png) |
 | As a user | I want to access the tarot reader’s social media accounts directly from the website | so that I can follow for updates and content | ![screenshot of footer](documentation/features/footer.png) |
 | As a user | I want social links to be visible and accessible | so that I can find them quickly and easily | ![screenshot of footer](documentation/features/footer.png) |
 | As a visitor | I want the website to load quickly | so that I have a smooth experience | ![screenshot of performance test](documentation/lighthouse/home-desktop.png) |
 | As a visitor | I want the website to feel calm, magical, and welcoming | so that it aligns with the spiritual theme | ![screenshot of homepage](documentation/features/landing-page.png) |
-| As a potential customer | I want to view the tarot reader's contact information | so that I can contact them for information or bookings | ![screenshot](documentation/features) <br>⚠️ --- Contact Details --- ⚠️ |
+| As a potential customer | I want to view the tarot reader's contact information | so that I can contact them for information or bookings | ![screenshot](documentation/features/contact-details.png) |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/404.png) |
 
 ## Bugs
-
-⚠️ INSTRUCTIONS ⚠️
-
-Nobody likes bugs,... except the assessors! Projects seem more suspicious if a student doesn't properly track their bugs. If you're about to submit your project without any bugs listed below, you should ask yourself why you're doing this course in the first place, if you're able to build this entire application without running into any bugs. The best thing you can do for any project is to document your bugs! Not only does it show the true stages of development, but think of it as breadcrumbs for yourself in the future, should you encounter the same/similar bug again, it acts as a gentle reminder on what you did to fix the bug.
-
-If/when you encounter bugs during the development stages of your project, you should document them here, ideally with a screenshot explaining what the issue was, and what you did to fix the bug.
-
-Alternatively, an improved way to manage bugs is to use the built-in **[Issues](https://www.github.com/geraldine-mor/charmed-arcana/issues)** tracker on your GitHub repository. This can be found at the top of your repository, the tab called "Issues".
-
-If using the Issues tracker for bug management, you can simplify the documentation process for testing. Issues allow you to directly paste screenshots into the issue page without having to first save the screenshot locally. You can add labels to your issues (e.g. `bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s). Once you've solved the issue/bug, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following examples below.
-
-⚠️ --- END --- ⚠️
 
 ### Fixed Bugs
 
 [![GitHub issue custom search](https://img.shields.io/github/issues-search/geraldine-mor/charmed-arcana?query=is%3Aissue%20is%3Aclosed%20label%3Abug&label=Fixed%20Bugs&color=green)](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
-I've used [GitHub Issues](https://www.github.com/geraldine-mor/charmed-arcana/issues) to track and manage bugs and issues during the development stages of my project.
+I  used [GitHub Issues](https://www.github.com/geraldine-mor/charmed-arcana/issues) to track and manage bugs and issues during the development stages of my project.
 
 All previously closed/fixed bugs can be tracked [here](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
 
-![screenshot](documentation/bugs/gh-issues-closed.png)
+![screenshot of closed bugs](documentation/readme-images/bugs.png)
 
 ### Unfixed Bugs
-
-⚠️ INSTRUCTIONS ⚠️
-
-You will need to mention any unfixed bugs and why they are not fixed upon submission of your project. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. Where possible, you must fix all outstanding bugs, unless outside of your control.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here! It's better to be honest and list them, because if it's not documented and an assessor finds the issue, they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-⚠️ --- END --- ⚠️
 
 [![GitHub issue custom search](https://img.shields.io/github/issues-search/geraldine-mor/charmed-arcana?query=is%3Aissue%2Bis%3Aopen%2Blabel%3Abug&label=Unfixed%20Bugs&color=red)](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 
 Any remaining open issues can be tracked [here](https://www.github.com/geraldine-mor/charmed-arcana/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
-![screenshot](documentation/bugs/gh-issues-open.png)
-
 ### Known Issues
 
 | Issue | Screenshot |
 | --- | --- |
-| The project is designed to be responsive from `375px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project’s scope, as taught by Code Institute. | ![screenshot](documentation/issues/poor-responsiveness.png) |
+| The project is designed to be responsive from `320px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project’s scope, as taught by Code Institute. | ![screenshot](documentation/readme-images/smartwatch-screen.png) |
 
 
 > [!IMPORTANT]  
