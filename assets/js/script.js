@@ -571,9 +571,9 @@ function expandCard(cardType) {
 
     cardBody.classList.toggle("hidden");
     if (cardBody.classList.contains("hidden")) {
-        detailsBtn.textContent = "More... ▽";
+        detailsBtn.textContent = "More... ▾";
     } else {
-        detailsBtn.textContent = "Less... △";
+        detailsBtn.textContent = "Less... ▴";
     }
 }
 
