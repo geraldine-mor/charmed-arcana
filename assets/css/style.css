@@ -283,7 +283,7 @@ main {
 }
 
 .form-container {
-    background-color: rgba(170, 198, 215, .7);
+    background-color: rgba(170, 198, 215, .9);
     flex-grow: 1;
     padding-top: 2.5rem;
     padding-bottom: 1.5rem;

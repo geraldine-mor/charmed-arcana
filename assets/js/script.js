@@ -1,4 +1,4 @@
-`/* jshint esversion: 11 */`;
+/* jshint esversion: 11 */;
 
 // Wait for the DOM to finish loading before running functions
 document.addEventListener("DOMContentLoaded", function () {
