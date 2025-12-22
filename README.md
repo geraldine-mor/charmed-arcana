@@ -9,7 +9,7 @@ Developer: Geraldine Morey ([geraldine-mor](https://www.github.com/geraldine-mor
 
 Charmed Arcana is a website for a tarot reader/spiritual guide. The primary goal of the website is to introduce the user to tarot and encourage people to engage with the services through calls to action placed throughout. The site is aimed at individuals who are curious about tarot and wish to find out more. The users need information about the services offered, tarot cards and the site owner.
 
-The evening I submitted my first project ([Rathnure RowFit](https://github.com/geraldine-mor/rathnure-rowfit)), I dreamed about a tarot card game website where the tarot cards would rotate to reveal a card. At that stage I didn't even know if that was something that JavaScript would handle, but as time went on I began to see how it might be done and the decision to pursue it as the main idea for project 2 was made.
+The evening I submitted my first project ([Rathnure RowFit](https://github.com/geraldine-mor/rathnure-rowfit)), I dreamed about a tarot card game website where the tarot cards would rotate to reveal a card. At that stage I didn't even know if that was something that JavaScript would handle, but as time went on I began to see how it might be done and the decision to pursue it as the main idea for project 2 was made. I designed the rest of the site to provide a clear reason for the tarot game to exist.
 
 ![screenshot of various sized mockups of the site](documentation/readme-images/am-i-responsive.png)
 
@@ -136,7 +136,7 @@ I used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ## User Stories
 
-Created wtith assistance from chatGPT
+Created with assistance from chatGPT
 
 | Target | Expectation | Outcome |
 | --- | --- | --- |
@@ -177,19 +177,18 @@ Created wtith assistance from chatGPT
 | Pricing | The services page displays pricing and duration of services clearly | ![screenshot of pricing](documentation/features/pricing.png) |
 | Contact Details | The website clearly displays the business' contact details | ![screenshot of contact details](documentation/features/contact-details.png) |
 | Enquiry Form | The website has an easy to use enquiry form that allows the user to contact the site owner directly with general or booking enquiries | ![screenshot of enquiry form](documentation/features/enquiry-form.png) |
-| Form Success Message | The form displays a success message on comletion of the form | ![screenshot of success message](documentation/features/form-success.png) |
-| Newsletter Signup | The website offers the user the opportunity to sign up to the newsletter | ![screenshot o fnewsletter signup](documentation/features/newsletter-modal.png) |
+| Form Success Message | The form displays a success message on completion of the form | ![screenshot of success message](documentation/features/form-success.png) |
+| Newsletter Signup | The website offers the user the opportunity to sign up to the newsletter | ![screenshot of newsletter signup](documentation/features/newsletter-modal.png) |
 | Email Signup Success Message | The user receives feedback that they have successfully signed up to the newsletter | ![screenshot of success message](documentation/features/newsletter-success.png) |
-| 404 error page | When the user clicks abroken link or mistypes apage address, a custom error message is displayed to let them know that something has gone wrong and to offer them a way back to the homepage via a button| ![screenshot of 404 page](documentation/features/404.png) |
+| 404 error page | When the user clicks a broken link or mistypes a page address, a custom error message is displayed to let them know that something has gone wrong and to offer them a way back to the homepage via a button| ![screenshot of 404 page](documentation/features/404.png) |
 
 
 ### Future Features
 
-- **Booking Form**: Allow users to book the services deirectly from the website (check availability, pay deposit etc).
+- **Booking Form**: Allow users to book the services directly from the website (check availability, pay deposit etc).
 - **Bookings Dashboard**: Allow the site owner to view, amend & export booking details in a clean and organised manner.
 - **Mailing List**: Allow the site owner to view and export email subscribers.
-- **Bookings Dashboard**: Allow the site owner to manage bookings directly from a backend dashboard.
-- **Meditation Page**: Add a page for medititaions that could allow the user to take part in a simple guided meditation.
+- **Meditation Page**: Add a page for meditations that could allow the user to take part in a simple guided meditation.
 - **Increase Complexity of Tarot Reading**: Increase the card deck from the current 22 cards of the major arcana to the full 76 card deck.
 - **Inverted Cards**: Allow readings to include inverted cards and their meanings.
 - **Memory Function**: Allow users to store previous readings for future perusal.
@@ -198,6 +197,7 @@ Created wtith assistance from chatGPT
 - **Save & Share Readings**: Allow users to save or share their reading via a link or social media.
 - **Swipe Scroll**: Add swipe feature to mobile game so that users can swipe between cards rather than using the navigation arrows.
 - **Card Library**: Add a library of all the cards in use so that users can see the cards and interpretations of all the cards, not just the ones revealed to them.
+- **Blog**: Add a blog section to the page to allow the site owner to share insights and ideas directly with the users.
 
 ## Tools & Technologies
 
@@ -332,11 +332,11 @@ There are no remaining major differences between the local version when compared
 | [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
 | [Pexels](https://www.pexels.com/photo/tarot-cards-near-burning-plants-in-close-up-photography-7947733/) | Homepage banner image | 
 | [Pexels](https://www.pexels.com/photo/a-woman-holding-a-deck-of-tarot-cards-11760488/) | Homepage about image |
- [Adobe Firefly](https://firefly.adobe.com/generate/image) | Tarot deck generated with AI |
+| [Adobe Firefly](https://firefly.adobe.com/generate/image) | Tarot deck generated with AI |
 | [Labrythos](https://labyrinthos.co/blogs/tarot-card-meanings-list) | Card design inspiration and text content | 
 | [Pexels](https://www.pexels.com/photo/hands-touching-the-tarot-cards-on-the-table-6014326/) | Tarot reading services card image |
 | [Pexels](https://www.pexels.com/photo/a-person-in-yoga-position-beside-a-woman-lying-on-floor-6998244/) | Guided meditation services card |
-| [Adobe Friefly](https://firefly.adobe.com/generate/image) | Remaining services cards images generated with AI |
+| [Adobe Firefly](https://firefly.adobe.com/generate/image) | Remaining services cards images generated with AI |
 | [Adobe Firefly](https://firefly.adobe.com/generate/image) | Background image of a shop generated with AI |
 | [Boardwalk Games](https://codeinstitute.net/ie/) | Inspiration for the contact details footer |
 | [Pexels](https://www.pexels.com/photo/road-surrounded-by-bare-trees-1632793/) | 404 page background image |
@@ -348,13 +348,13 @@ There are no remaining major differences between the local version when compared
 
 This project was my first real exploration into using AI to assist with a website build. 
 
-I primarily used [chatGPT](https://www.chatgpt.com) switching to [Claude](httpd://www.claude.ai) any time I ran out of chats on chatGPT or if I felt like I needed another answer to compare for accuracy of information. I used [Adobe Firefly](https://firefly.adobe.com/generate/image) for all image creation.
+I primarily used [chatGPT](https://www.chatgpt.com) switching to [Claude](https://www.claude.ai) any time I ran out of chats on chatGPT or if I felt like I needed another answer to compare for accuracy of information. I used [Adobe Firefly](https://firefly.adobe.com/generate/image) for all image creation.
 
 In the planning stages, I used AI to help generate the user stories and during the build I frequently used AI to generate text content such as the about sections and services details, image content such as the tarot deck and the services cards. I rarely copied the text exactly but it did help provide ideas and direction.
 
 AI and troubleshooting: I used AI when my own attempts at troubleshooting had failed. Copying and pasting my code in to see where I had gone wrong. AI was not always correct but always pointed me in the right direction. 
 
-I ensured any explanations didn't include code by writing explicitly into the promt that I required explanations only and not code such as the below example:
+I ensured any explanations didn't include code by writing explicitly into the prompt that I required explanations only and not code such as the below example:
 
 ![screenshot of chatGPT prompt and response](documentation/readme-images/chatgpt-prompt.png)
 

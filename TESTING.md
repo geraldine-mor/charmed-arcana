@@ -13,7 +13,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | --- | --- | --- | --- | --- |
 |  | [404.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/404.html) | ![screenshot of 404.html validation](documentation/code-validation/404.png) | |
 |  | [index.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/index.html) | ![screenshot of index.html validation](documentation/code-validation/home.png) | |
-|  | [services.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/services.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/services.html) | ![screenshot of services.html with warnings](documentation/code-validation/services-validation-warnings.png) ![screenshot of services.html validation](documentation/code-validation/services.png) ![screenshot of services.html with warnings](documentation/code-validation/services-id-error.png) | First check revealed warnings regarding unfinished sections - tese were removed as I decided to create a separate page for them. Page passed on 2nd check. A final check run after site completion showed an error on a duplicated id. As this id was not targeted anywhere, it was removed from both divs. Validation passed. |
+|  | [services.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/services.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/services.html) | ![screenshot of services.html with warnings](documentation/code-validation/services-validation-warnings.png) ![screenshot of services.html validation](documentation/code-validation/services.png) ![screenshot of services.html with warnings](documentation/code-validation/services-id-error.png) | First check revealed warnings regarding unfinished sections - these were removed as I decided to create a separate page for them. Page passed on 2nd check. A final check run after site completion showed an error on a duplicated id. As this id was not targeted anywhere, it was removed from both divs. Validation passed. |
 |  | [tarot.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/tarot.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/tarot.html) | ![screenshot of tarot.html validation](documentation/code-validation/tarot.png) | |
 |  | [contact.html](https://github.com/geraldine-mor/charmed-arcana/blob/main/contact.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://geraldine-mor.github.io/charmed-arcana/contact.html) | ![screenshot of contact.html with warning](documentation/code-validation/contact-date-error.png) ![screenshot of contact.html validation](documentation/code-validation/contact.png) | I had initially left the `min` attribute value empty since JavaScript is handling this but that caused a validation error.  I entered today's date as a placeholder and that fixed the issue.
 
@@ -35,7 +35,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-semicolon-errors.png) | Code check run at the end of tarot game build showed 7 missed semicolons and some esversion warnings|
+| assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-semicolon-errors.png) | Code check run at the end of the tarot game build showed 7 missed semicolons and some esversion warnings|
 | assets | [script.js](https://github.com/geraldine-mor/charmed-arcana/blob/main/assets/js/script.js) |  | ![screenshot of jshint response](documentation/code-validation/js-validation.png) | When I checked it again at the end of the build, I had resolved the syntax error that was causing the esversion warnings. There was 1 warning regarding functions declared within loops but this is as taught in the code institute Love Maths run through and is acceptable |
 
 ## Responsiveness
@@ -54,15 +54,13 @@ I tested my deployed project to check for responsiveness issues.
 
 I tested my deployed site on 3 different devices to check for full responsiveness and real-world testing. Viewport sizes were taken from [Viewport Sizer](https://viewportsizer.com/).
 
-⚠️ TBC ⚠️
-
-| Page | Mobile | Tablet <br> iPad <br> 768x898| Desktop <br> Dell 22" <br> 1665x929| Notes |
+| Page | Mobile <br> Oppo <br> 360x648| Tablet <br> iPad <br> 768x898| Desktop <br> Dell 22" <br> 1665x929| Notes |
 | --- | --- | --- | --- | --- |
-| Home | ![screenshot of homepage on mobile](documentation/device-testing/) | ![screenshot of homepage on tablet](documentation/device-testing/ipad-home.png) | ![screenshot of homepage on desktop](documentation/device-testing/dell-home.png) | Works as expected |
-| Tarot | ![screenshot of tarot page on mobile](documentation/device-testing/) | ![screenshot of tarot on tablet](documentation/device-testing/ipad-tarot-3.png) | ![screenshot of tarot page on desktop](documentation/device-testing/dell-tarot.png) | Works as expected |
-| Services | ![screenshot of services page on mobile](documentation/device-testing/) | ![screenshot of services page on tablet](documentation/device-testing/ipad-services.png) | ![screenshot of services page on desktop](documentation/device-testing/dell-services.png) | Works as expected |
-| Contact | ![screenshot of contact page on mobile](documentation/device-testing/) | ![screenshot of contact page on tablet](documentation/device-testing/ipad-contact.png) | ![screenshot of contact page on desktop](documentation/device-testing/dell-contact.png) | Works as expected |
-| 404 | ![screenshot of 404 page on mobile](documentation/device-testing/) | ![screenshot of 404 page on tablet](documentation/device-testing/ipad-404.png) | ![screenshot of 404 page on desktop](documentation/device-testing/dell-404.png) | Works as expected |
+| Home | ![screenshot of homepage on mobile](documentation/device-testing/oppo-home.jpeg) | ![screenshot of homepage on tablet](documentation/device-testing/ipad-home.png) | ![screenshot of homepage on desktop](documentation/device-testing/dell-home.png) | Works as expected |
+| Tarot | ![screenshot of tarot page on mobile](documentation/device-testing/oppo-tarot.jpeg) | ![screenshot of tarot on tablet](documentation/device-testing/ipad-tarot-3.png) | ![screenshot of tarot page on desktop](documentation/device-testing/dell-tarot.png) | Works as expected |
+| Services | ![screenshot of services page on mobile](documentation/device-testing/oppo-services.jpeg) | ![screenshot of services page on tablet](documentation/device-testing/ipad-services.png) | ![screenshot of services page on desktop](documentation/device-testing/dell-services.png) | Works as expected |
+| Contact | ![screenshot of contact page on mobile](documentation/device-testing/oppo-contact.jpeg) | ![screenshot of contact page on tablet](documentation/device-testing/ipad-contact.png) | ![screenshot of contact page on desktop](documentation/device-testing/dell-contact.png) | Works as expected |
+| 404 | ![screenshot of 404 page on mobile](documentation/device-testing/oppo-404.jpeg) | ![screenshot of 404 page on tablet](documentation/device-testing/ipad-404.png) | ![screenshot of 404 page on desktop](documentation/device-testing/dell-404.png) | Works as expected |
 
 
 ## Browser Compatibility
@@ -112,7 +110,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | --- | --- | --- | --- |
 | As a visitor | I want to easily navigate the site | to find all the information I need quickly and easily | ![screenshot of navbar](documentation/features/navbar-expand.png) |
 | As a visitor | I want to view the overall mission and purpose of the site | so that I feel connected to its purpose | ![screenshot of landing page](documentation/features/landing-page.png) |
-| As a visitor | I want to understand what the website offers | so that I know whether is fits my spiritual interests | ![screenshot of about section](documentation/features/about-section.png) |
+| As a visitor | I want to understand what the website offers | so that I know whether it fits my spiritual interests | ![screenshot of about section](documentation/features/about-section.png) |
 | As a potential customer | I want to see information about the services provided | so that I can see if they fit my needs  | ![screenshot of services page](documentation/features/services.png) |
 | As a potential customer | I want to complete an enquiry form | so that I can ask questions about the services | ![screenshot of enquiry form](documentation/features/enquiry-form.png) |
 | As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. | ![screenshot of game button instruction](documentation/features/button1.png) ![screenshot of game button instruction](documentation/features/button2.png) |
